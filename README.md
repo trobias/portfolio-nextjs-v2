@@ -13,7 +13,7 @@ npm run typecheck
 npm run build
 ```
 
-`npm run lint`, `npm run typecheck` y `npm run build` pasan con las versiones fijadas; no cambies dependencias sin autorización.
+`npm run typecheck` y `npm run build` pasan con las versiones fijadas. `npm run lint` está bloqueado porque el `typescript-eslint` incluido no soporta TypeScript 7.0.2; no cambies dependencias sin autorización.
 
 ## Lectura para humanos y agentes
 

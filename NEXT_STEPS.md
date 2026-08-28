@@ -17,6 +17,7 @@
 5. Probar teclado, hover real, zoom 200% y `prefers-reduced-motion` en Chrome/Edge y Firefox.
 6. Entregar la URL oficial de Facebook de ZUBU Agency para completar su bloque social sin inventar un perfil.
 7. Decidir si los archivos estáticos legacy de la raíz (`index.html`, `styles.css`) se archivan o eliminan; se conservaron para no borrar trabajo sin aprobación.
+8. Autorizar una actualización compatible del toolchain de lint: la combinación fijada actualmente hace que `typescript-eslint` rechace TypeScript 7.0.2 antes de analizar el código.
 
 
 ## P2 — Evolución opcional

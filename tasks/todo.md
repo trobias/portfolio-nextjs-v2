@@ -18,9 +18,9 @@ Cada tarea cabe en una sesión enfocada y debe actualizar la documentación rela
   - Verify: `/robots.txt`, `/sitemap.xml`, metadata y rutas principales responden HTTP 200.
   - Files: `app/layout.tsx`, `app/sitemap.ts`, `app/robots.ts`, `VERIFICATION.md`.
 
-- [x] Verificar ESLint con el toolchain fijado.
+- [ ] Compatibilizar ESLint con el toolchain fijado, previa autorización para cambiar versiones.
   - Acceptance: `npm run lint`, `npm run typecheck` y `npm run build` terminan con código 0.
-  - Verify: los tres comandos pasaron el 28 de agosto de 2026 sin cambiar dependencias.
+  - Verify: typecheck y build pasan; lint actualmente sale con código 2 porque `typescript-eslint` no soporta TypeScript 7.0.2.
   - Files: `VERIFICATION.md`, `NEXT_STEPS.md`.
 
 - [ ] Completar ERP Mamayucca con evidencia autorizada.

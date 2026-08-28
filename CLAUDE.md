@@ -8,6 +8,8 @@ The project archive is intentionally organized by the three `group` values defin
 
 Primary pill CTAs use `AnimatedPillLink`; do not replace its directional fill sweep with a generic background-color hover.
 
+The current lint gate is blocked because the bundled `typescript-eslint` does not support the pinned TypeScript 7.0.2; keep the failure visible and request approval before changing toolchain versions.
+
 Commit every verified functional change separately with a Spanish commit message and push it to `main`; this repository has standing user authorization for that workflow.
 
 This is the independent Next.js repository `trobias/portfolio-nextjs-v2`, deployed by the separate Vercel project `portfolio-nextjs-v2` at `portfolio-nextjs-v2-ashen.vercel.app`; never push it to the legacy `trobias/PORTFOLIO` repository.

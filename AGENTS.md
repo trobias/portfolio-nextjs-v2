@@ -54,6 +54,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 - `npm run typecheck`
 - `npm run build`
 - `npm run lint`
+- Known gate: `npm run lint` currently exits with code 2 because the bundled `typescript-eslint` does not support the pinned TypeScript 7.0.2; do not change versions or claim the gate passes without approval and a successful rerun.
 - After UI changes, test 390px, 768px and 1440px, keyboard focus, reduced motion and browser console output.
 
 ## Change discipline

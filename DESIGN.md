@@ -135,6 +135,8 @@ Las superficies, capturas, tarjetas y etiquetas tienen esquinas rectas. Los boto
 
 Las líneas divisorias son de 1px y baja opacidad. No se usan bordes laterales gruesos para producir énfasis; el énfasis se logra con escala, peso o cambio de campo.
 
+**Favicon lúdico.** La pestaña usa el recorte cuadrado y transparente de Homero entregado por Tobías, priorizando rostro y gesto para que sea reconocible a 16–32px. Sus colores pertenecen únicamente al asset: no amplían la paleta del sitio ni deben reutilizarse como acentos de interfaz.
+
 ## Components
 
 ### Buttons

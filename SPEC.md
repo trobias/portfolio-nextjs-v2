@@ -152,7 +152,7 @@ La matriz completa vive en `PROJECTS.md` y `VERIFICATION.md`. Resumen para el si
 |---|---|---|
 | Tipos | Integridad del modelo y componentes | `npm run typecheck` pasa |
 | Producción | Compilación y prerender de todas las rutas | Revalidar `npm run build` tras la iteración de 27 casos |
-| Lint | Reglas estáticas | `npm run lint` pasa |
+| Lint | Reglas estáticas | Bloqueado por incompatibilidad entre `typescript-eslint` y TypeScript 7.0.2; requiere aprobar un cambio de toolchain |
 | Navegador | Hero, menú, grilla, casos y consola | Revisado en 390px y 1440px |
 | Accesibilidad | Skip link, foco, semántica y reduced motion | Skip link comprobado; auditoría manual final pendiente antes de publicar |
 | Enlaces | Demo pública vs. login/404/DNS | Verificado y documentado el 27/08/2026 |

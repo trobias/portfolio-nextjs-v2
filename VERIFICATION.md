@@ -11,12 +11,12 @@ Producción: `https://portfolio-nextjs-v2-ashen.vercel.app`, proyecto Vercel ind
 | Control | Resultado | Evidencia |
 |---|---|---|
 | TypeScript | Pasa | `npm run typecheck` finaliza sin errores |
-| Build de producción | Pasa | `npm run build` genera 35 páginas estáticas, incluidas 27 fichas de proyecto, Open Graph y Twitter card |
+| Build de producción | Pasa | `npm run build` genera 36 páginas estáticas, incluidas 27 fichas de proyecto, favicon, Open Graph y Twitter card |
 | Consola del navegador | Pasa | Sin mensajes de nivel `warn` o `error` en portada y catálogo |
 | Overflow horizontal | Pasa | Portada, catálogo y caso largo verificados en escritorio y móvil |
 | Teclado | Pasa | El primer `Tab` enfoca `Saltar al contenido` y apunta a `#main-content` |
 | Detector de calidad visual | Pasa | El detector de Impeccable devuelve una lista vacía |
-| ESLint | Pasa | `npm run lint` finaliza sin advertencias ni errores con el toolchain fijado |
+| ESLint | Bloqueado | `npm run lint` sale con código 2: el `typescript-eslint` incluido no soporta TypeScript 7.0.2; resolverlo requiere aprobar un cambio de versiones |
 | React Doctor | No ejecutado | No está instalado localmente; instalarlo o ejecutarlo con descarga requiere autorización |
 
 ## Producción y Git
@@ -91,6 +91,15 @@ Publicación confirmada para el commit funcional `6ac5b2d`:
 - Portada y `/proyectos` responden HTTP 200 con Ceferina, el menú de contacto y “3 categorías”.
 - `/proyectos/emag-inmersivo-gsap` responde HTTP 200 en el alias de producción.
 - El HTML publicado contiene los 27 casos y el CTA superior del archivo.
+
+## Revalidación del favicon
+
+Verificación local del 28 de agosto de 2026:
+
+- `app/icon.png`: PNG RGBA de 512 × 512, generado a partir de la imagen entregada por Tobías y reconocido por la convención de metadata de Next.js.
+- `npm run typecheck`: pasa.
+- `npm run build`: pasa y prerenderiza `/icon.png` dentro de 36 rutas estáticas.
+- `npm run lint`: bloqueado antes de analizar archivos porque el `typescript-eslint` incluido declara que no soporta TypeScript 7.0.2. No se cambiaron dependencias.
 
 ## Privacidad
 

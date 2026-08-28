@@ -27,6 +27,12 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 - Historical evidence lives under `public/proyectos/`; new verified demo captures live under `public/project-covers/`.
 - The legacy root `index.html` and `styles.css` are preserved until the user explicitly approves archiving or deletion.
 
+## Repository and hosting
+
+- This codebase belongs to `https://github.com/trobias/portfolio-nextjs-v2` and deploys as the separate Vercel project `portfolio-nextjs-v2`.
+- The production alias is `https://portfolio-nextjs-v2.vercel.app`; keep metadata, sitemap and robots aligned with it unless a custom domain is explicitly approved.
+- Never push this Next.js code to the legacy `trobias/PORTFOLIO` repository.
+
 ## Design and motion
 
 - Use only the orange signal accent defined in `DESIGN.md`; do not add a second brand color or gradient text.

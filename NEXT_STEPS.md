@@ -6,9 +6,8 @@
 
 1. **Dokploy:** abrir una sesión autenticada o entregar las URLs públicas autorizadas. La sesión disponible durante el relevamiento expiró; no se intentó iniciar sesión ni recuperar credenciales.
 2. **Contenido privado:** completar el checklist de `PROJECTS.md` para Bot Mamayucca, ERP Mamayucca, facturación, Misiones Muebles, Nico Scraper, Ceferina, Zuzaniuk, BarberAdmin y ZUBU Rentals.
-3. **Dominio final:** confirmar la URL de producción para reemplazar `https://tobias.vercel.app` en metadata, sitemap y robots.
-4. **ESLint:** autorizar el cambio de TypeScript 7 a una versión 6.x compatible con `typescript-eslint`. Typecheck y build pasan; lint queda bloqueado por incompatibilidad de herramientas.
-5. **React Doctor:** autorizar su instalación local si querés agregar ese diagnóstico al gate; no existe un binario instalado y no se descargó tooling mutable sin permiso.
+3. **ESLint:** autorizar el cambio de TypeScript 7 a una versión 6.x compatible con `typescript-eslint`. Typecheck y build pasan; lint queda bloqueado por incompatibilidad de herramientas.
+4. **React Doctor:** autorizar su instalación local si querés agregar ese diagnóstico al gate; no existe un binario instalado y no se descargó tooling mutable sin permiso.
 
 ## P1 — Antes de publicar
 

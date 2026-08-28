@@ -196,7 +196,7 @@ Un agente nuevo debe continuar desde este estado. No debe reconstruir el proyect
 P0 Evidencia privada autorizada ──┬──> completar casos privados
                                  └──> reemplazar placeholders aprobados
 
-P0 Dominio final ───────────────────> metadata + sitemap + robots + OG
+Dominio resuelto ───────────────────> metadata + sitemap + robots + OG
 
 P0 Aprobación de tooling ───────────> TypeScript 6.x ──> lint operativo
 
@@ -223,17 +223,16 @@ El backlog ejecutable está en `tasks/todo.md`; el orden y rollback están en `t
 - Autenticación, CMS, base de datos o panel de edición del portfolio.
 - Copia exacta de NOTMID o transformación en ecommerce.
 - Login automático en servicios privados.
-- Deploy, configuración DNS o publicación en Vercel.
+- Configuración de un dominio personalizado distinto del alias público de Vercel.
 - Métricas comerciales no entregadas por el usuario.
 - Eliminación de los archivos legacy.
 
 ## 15. Preguntas abiertas para Tobías
 
-1. ¿Cuál será el dominio final del portfolio?
-2. ¿Autoriza fijar TypeScript 6.x para recuperar ESLint?
-3. ¿Qué capturas y módulos de ERP Mamayucca, Bot Mamayucca, Facturación, Misiones Muebles, Nico Scraper, Ceferina, Zuzaniuk y BarberAdmin pueden publicarse?
-4. ¿Cuál es la URL vigente de ZUBU Rentals?
-5. ¿Qué imagen y copy deben usarse como Open Graph final?
+1. ¿Autoriza fijar TypeScript 6.x para recuperar ESLint?
+2. ¿Qué capturas y módulos de ERP Mamayucca, Bot Mamayucca, Facturación, Misiones Muebles, Nico Scraper, Ceferina, Zuzaniuk y BarberAdmin pueden publicarse?
+3. ¿Cuál es la URL vigente de ZUBU Rentals?
+4. ¿Se mantendrá el alias `portfolio-nextjs-v2.vercel.app` o se configurará un dominio personalizado más adelante?
 
 ## 16. Rollback
 

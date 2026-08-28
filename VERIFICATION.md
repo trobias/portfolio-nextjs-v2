@@ -49,7 +49,12 @@ Se verificó localmente la puerta visual al archivo, las miniaturas compactas, l
 - Revisión visual: 390px, 768px y 1440px sin pérdida horizontal después de ajustar el título, la introducción y el conteo móvil.
 - Capturas nuevas: `.impeccable/review/archive-top-390.png`, `.impeccable/review/archive-top-768.png` y `.impeccable/review/archive-groups-1440.png`.
 
-La publicación y la comprobación del alias de producción se registran después del push autorizado; hasta entonces, los resultados anteriores de producción siguen describiendo el commit desplegado.
+Publicación confirmada para el commit `81ff71a`:
+
+- Deployment de producción `Ready` en 23 segundos y asociado a `portfolio-nextjs-v2-ashen.vercel.app`.
+- Portada, `/proyectos` y `/proyectos/tienda-mamayucca` responden HTTP 200.
+- La portada publicada contiene el CTA “Archivo completo · 4 categorías”.
+- El índice publicado contiene las cuatro familias y sus conteos derivados de `lib/projects.ts`.
 
 ## Verificación de enlaces aportados
 

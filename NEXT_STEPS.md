@@ -11,13 +11,12 @@
 
 ## P1 — Mejoras posteriores a la publicación
 
-1. Publicar la iteración ya verificada y comprobar portada, archivo y una ficha sobre el alias de producción.
-2. Revalidar todos los enlaces públicos y revisar que ninguna demo haya agregado login.
-3. Reemplazar portadas editoriales por capturas reales sólo cuando exista autorización.
-4. Open Graph y Twitter card creados estáticamente con diseño editorial (`/opengraph-image`, `/twitter-image`).
-5. Ejecutar Lighthouse sobre `https://portfolio-nextjs-v2-ashen.vercel.app` para LCP, CLS, INP, accesibilidad y SEO.
-6. Probar teclado, hover real, zoom 200% y `prefers-reduced-motion` en Chrome/Edge y Firefox.
-7. Decidir si los archivos estáticos legacy de la raíz (`index.html`, `styles.css`) se archivan o eliminan; se conservaron para no borrar trabajo sin aprobación.
+1. Revalidar todos los enlaces públicos y revisar que ninguna demo haya agregado login.
+2. Reemplazar portadas editoriales por capturas reales sólo cuando exista autorización.
+3. Open Graph y Twitter card creados estáticamente con diseño editorial (`/opengraph-image`, `/twitter-image`).
+4. Ejecutar Lighthouse sobre `https://portfolio-nextjs-v2-ashen.vercel.app` para LCP, CLS, INP, accesibilidad y SEO.
+5. Probar teclado, hover real, zoom 200% y `prefers-reduced-motion` en Chrome/Edge y Firefox.
+6. Decidir si los archivos estáticos legacy de la raíz (`index.html`, `styles.css`) se archivan o eliminan; se conservaron para no borrar trabajo sin aprobación.
 
 
 ## P2 — Evolución opcional

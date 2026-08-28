@@ -56,7 +56,7 @@ El portfolio no separa desarrollo, automatización e infraestructura en discipli
 - Imágenes, capturas, documentos y archivos de proyectos históricos migrados a `public/images/` y `public/proyectos/`.
 - Perfil público de GitHub: `https://github.com/trobias`.
 - Repositorios públicos verificados para EMAG, Jarvis, Asistente IA de LinkedIn, Process Simulator y ZUBU3, entre otros.
-- Demos públicas verificadas para Mamayucca, Agroveterinaria Gross, ZUBU Agency, Tienda EMAG, Yeryos, Salazar Inmobiliaria, el catálogo Natural de OrdenYa, Norte Gaming y Nutriado.
+- Demos públicas verificadas para Mamayucca, Agroveterinaria Gross, ZUBU Agency, Ceferina, Tienda EMAG, EMAG Inmersivo, Yeryos, Tienda OrdenYa y Nutriado.
 - No hay evidencia pública confirmada todavía para todos los proyectos nuevos. El portfolio debe reconocer esa ausencia y usar una ficha interna, no fabricar una demo o captura.
 
 ## Product Principles

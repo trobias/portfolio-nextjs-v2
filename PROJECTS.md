@@ -17,23 +17,22 @@ Este archivo registra qué puede publicarse y qué falta confirmar. La fuente de
 | Caso | Estado público | Evidencia / portada | Pendiente |
 |---|---|---|---|
 | Tienda Mamayucca | Demo pública | Captura propia de `mamayucca.com` | Confirmar repositorio si alguna vez se hace público |
-| Agroveterinaria Gross | Dos demos públicas | Capturas institucional + tienda | Confirmar stack y módulos del sistema privado |
-| ZUBU Agency | Dominio + repo público | Captura de `zubuagency.com`, repo `ZUBU3` | Reemplazar homepage 404 del repo si corresponde |
-| EMAG + SUBOT | Demo + repo público | Captura de Tienda EMAG y material histórico de n8n/WhatsApp | Confirmar qué significa SUBOT dentro del alcance final |
+| Agroveterinaria Gross | Tienda pública principal + institucional secundaria | GIF del hero comercial y capturas propias | Confirmar stack y módulos del sistema privado |
+| ZUBU Agency | Dominio + repo público | Captura vigente, repo `ZUBU3` y rol de cofundador confirmado por CV | Entregar URL oficial de Facebook |
+| EMAG + SUBOT | Repo público | Material histórico de n8n/WhatsApp | Sin demo del bot en producción |
+| Tienda EMAG | Demo pública | GIF del hero y captura propia | Repositorio privado |
+| EMAG Inmersivo / GSAP | Demo pública en `/home2` | Captura propia y video de hero | Repositorio privado |
 | Jarvis | Repo público | Capturas históricas del flujo | Sin demo: requiere permisos de Workspace |
 | Facturación Mercado Pago + ARCA | Caso interno | Portada editorial | Diagrama desensibilizado, stack y estados reales |
-| ERP Mamayucca | Despliegue privado con PIN | Portada editorial | Módulos, stack, capturas autorizadas y resultado |
+| ERP Mamayucca | Despliegue privado con PIN + código local | Portada editorial; stack y módulos auditados localmente | Captura desensibilizada autorizada y resultado |
 | Bot Mamayucca | Caso interno | Portada editorial | Canales, integraciones, diagrama y resultado |
-| Misiones Muebles | Detectado en Dokploy | Portada editorial | URL pública autorizada o acceso autenticado para relevarlo |
-| Nico Scraper | Caso interno | Portada editorial | Fuente, pipeline, límites, salida y stack |
-| Ceferina Accesorios | Caso interno | Portada editorial | Dominio y material propios; no usar marcas homónimas |
-| Yeryos | Demo pública | Captura propia de la tienda | Confirmar repositorio sólo si se hace público |
-| Zuzaniuk | Caso interno | Portada editorial | Objetivo, stack, imágenes, demo o repo |
-| Salazar Inmobiliaria | Demo pública | Captura propia del sitio | Confirmar stack y alcance técnico |
-| OrdenYa | Catálogo público + ERP privado | Captura del catálogo Natural | Capturas autorizadas del ERP si corresponde |
-| BarberAdmin | Despliegue con login | Portada editorial | Recorrido o capturas desensibilizadas autorizadas |
-| Norte Gaming | Demo pública | Captura propia de la tienda | Confirmar repositorio sólo si se hace público |
-| ZUBU Rentals | Dominio sin DNS | Portada editorial | Restaurar URL o entregar un dominio vigente |
+| Misiones Muebles | Código local + despliegue privado | Portada editorial; alcance y stack auditados localmente | Captura desensibilizada o demo autorizada |
+| Nico Scraper | Repo privado confirmado | Portada editorial | Fuente, pipeline, límites, salida y stack |
+| Ceferina Accesorios | Demo pública | Captura propia del hero | Repositorio privado |
+| Yeryos | Demo pública | GIF del hero y captura propia | Confirmar repositorio sólo si se hace público |
+| Zuzaniuk | Código local + repo privado | GIF creado desde el video local del hero | Confirmar si tendrá demo pública |
+| ERP OrdenYa | Despliegue privado con PIN | Portada editorial | Capturas autorizadas del ERP si corresponde |
+| Tienda OrdenYa | Demo pública | Captura del catálogo Natural | Repositorio privado |
 | Nutriado | Demo + repo público | Captura pública | Confirmar alcance clínico/comercial antes de ampliar copy |
 | Asistente IA RR.HH. | Repo + informe | Capturas existentes | Sin cambios urgentes |
 | Process Simulator | Repo + informe | Captura de UI y foto del prototipo | Sin cambios urgentes |
@@ -48,11 +47,11 @@ Este archivo registra qué puede publicarse y qué falta confirmar. La fuente de
 ## Fuentes verificadas
 
 - Perfil público: `https://github.com/trobias`.
-- Demos públicas: Mamayucca, Agroveterinaria Gross institucional, tienda Gross, ZUBU Agency, Tienda EMAG, Yeryos, Salazar Inmobiliaria, catálogo Natural de OrdenYa, Norte Gaming y Nutriado.
-- `barberia.zubuagency.com`, el ERP de OrdenYa y el ERP Mamayucca requieren credenciales o PIN; no se presentan como demos.
-- `rentals.zubuagency.com` no resolvió DNS y la ruta compartida `tiendamamayucca.vercel.app/ZUBU` redirigió a una página 404; ninguna se enlaza como demo.
+- Demos públicas: Mamayucca, tienda Agroveterinaria Gross, ZUBU Agency, Ceferina, Tienda EMAG, EMAG Inmersivo, Yeryos, Tienda OrdenYa y Nutriado.
+- El ERP de OrdenYa y el ERP Mamayucca requieren credenciales o PIN; no se presentan como demos.
+- La ruta compartida `tiendamamayucca.vercel.app/ZUBU` redirigió a una página 404; se conserva la tienda pública válida.
 - El antiguo deploy `zubu-landing.vercel.app` devolvió 404 durante el relevamiento y no se publica como demo.
-- Las búsquedas de Ceferina, Zuzaniuk y otros nombres ambiguos no produjeron coincidencias atribuibles con seguridad; no se enlazaron resultados homónimos.
+- Ceferina fue asociada a su dominio explícitamente entregado; Zuzaniuk se auditó desde la ubicación local entregada y conserva su repo remoto privado sin enlace público.
 
 ## Material que debe pedir cada ficha privada
 

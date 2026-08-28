@@ -7,11 +7,10 @@ Fuente: `SPEC.md`. Este plan parte de una baseline ya implementada y no autoriza
 ```text
 A. Decisiones de Tobías
    ├─ A1 dominio final [resuelto] ──> B1 metadata/SEO [completado]
-   ├─ A2 autorización de tooling ───> B2 compatibilidad ESLint
-   ├─ A3 evidencia privada ─────────> B3 completar casos privados
-   └─ A4 URL Rentals ───────────────> B4 revalidar y capturar
+   ├─ A2 evidencia privada ─────────> B2 completar casos privados
+   └─ A3 Facebook ZUBU ─────────────> B3 completar canales de la agencia
 
-B1 + B2 + B3 + B4
+B1 + B2 + B3
    └─> C. QA final 390/768/1440 + A11Y + Lighthouse
        └─> D. Revisión humana
            └─> E. Deploy sólo con autorización
@@ -20,8 +19,7 @@ B1 + B2 + B3 + B4
 ## Fase 1: desbloqueos
 
 1. Dominio y publicación resueltos con el repositorio y proyecto Vercel independientes; conservar el alias documentado hasta aprobar un dominio personalizado.
-2. Resolver si TypeScript puede fijarse en 6.x; si no, conservar el bloqueo documentado.
-3. Obtener una URL vigente para Rentals o mantener su caso como documentación interna.
+2. Obtener la URL oficial de Facebook de ZUBU Agency; no asociar resultados homónimos.
 
 Checkpoint: `NEXT_STEPS.md` no contiene un bloqueo que ya fue resuelto.
 
@@ -37,7 +35,7 @@ Checkpoint: cada ficha actualizada cumple las cinco invariantes de evidencia de 
 
 1. Reemplazar el dominio provisional en metadata, sitemap y robots.
 2. Crear Open Graph propio con dimensiones y texto alternativo definidos.
-3. Reejecutar typecheck, build, lint si fue desbloqueado y revisión de navegador.
+3. Reejecutar typecheck, build, lint y revisión de navegador.
 4. Ejecutar Lighthouse en una build servida como producción.
 
 Checkpoint: los criterios de aceptación globales de `SPEC.md` pasan.

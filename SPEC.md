@@ -1,7 +1,7 @@
 # Spec: remaster del portfolio de Tobías Tarnowski
 
-Estado: baseline implementada, validada y pendiente de publicación.  
-Última verificación: 27 de agosto de 2026.  
+Estado: publicado y en iteración de contenido/densidad.
+Última verificación de contenido: 28 de agosto de 2026.
 Fuente de ejecución: este archivo define qué se construye; `DESIGN.md`, `PROJECTS.md` y `VERIFICATION.md` definen cómo se ve, qué evidencia puede publicarse y qué ya fue comprobado.
 
 ## 1. Objetivo
@@ -19,10 +19,10 @@ La referencia visual es NOTMID sólo por su escala tipográfica, contraste, ritm
 ### Resultado observable
 
 1. La portada comunica “Conecto. Automatizo. Resuelvo.” dentro del primer viewport.
-2. El índice muestra 28 casos con una ruta estática propia.
+2. El índice muestra 27 casos con una ruta estática propia y tres familias de navegación.
 3. Cada demo enlazada fue verificada sin login; cada sistema privado se explica sin exponer acceso.
 4. La dirección visual, la evidencia y los próximos pasos quedan documentados en el repositorio.
-5. Typecheck y build pasan; los bloqueos de tooling quedan declarados, no ocultos.
+5. Lint, typecheck y build pasan; cualquier gate opcional no ejecutado queda declarado, no oculto.
 
 ## 2. Supuestos confirmados por el trabajo existente
 
@@ -58,7 +58,7 @@ npm run lint
 npm run start
 ```
 
-`npm run lint` está bloqueado por la incompatibilidad actual entre TypeScript 7.0 y `typescript-eslint`. No modificar versiones sin aprobación. Los resultados vigentes están en `VERIFICATION.md`.
+Los comandos usan las versiones fijadas del repositorio. Los resultados vigentes están en `VERIFICATION.md`; no modificar versiones sin aprobación.
 
 ## 5. Estructura y propiedad
 
@@ -66,7 +66,7 @@ npm run start
 |---|---|
 | `app/` | Rutas, metadata, sitemap, robots y estilos globales |
 | `components/` | Hero, navegación, grilla, visuales y elementos reutilizables |
-| `lib/projects.ts` | Modelo tipado y 28 fichas de proyecto |
+| `lib/projects.ts` | Modelo tipado y 27 fichas de proyecto |
 | `public/project-covers/` | Capturas nuevas de demos públicas verificadas |
 | `public/proyectos/` | Evidencia histórica, informes y galerías migradas |
 | `public/images/` | Retrato e imágenes generales |
@@ -90,7 +90,7 @@ type Project = {
   slug: string;
   title: string;
   category: string;
-  group: "automation" | "commerce" | "brand" | "infrastructure";
+  group: "commerce" | "automation" | "infrastructure";
   year: string;
   index: string;
   summary: string;
@@ -110,7 +110,7 @@ type Project = {
 };
 ```
 
-`group` controla únicamente la arquitectura del índice `/proyectos`; `category` conserva la descripción específica de cada caso. Las cuatro familias y sus textos viven junto a los proyectos en `lib/projects.ts`, de modo que el conteo y el contenido no se dupliquen en la vista.
+`group` controla únicamente la arquitectura del índice `/proyectos`; `category` conserva la descripción específica de cada caso. Las tres familias —comercio/plataformas/experiencias, sistemas/ERP/bots/automatización e infraestructura/hardware/3D— viven junto a los proyectos en `lib/projects.ts`. Web y marca se integran en comercio, mientras ERP, tienda y bot se modelan como productos separados.
 
 ### Invariantes de evidencia
 
@@ -128,7 +128,7 @@ La fuente normativa completa es `DESIGN.md`. Estas invariantes permiten a un age
 - Tipos: Archivo para contenido; IBM Plex Mono sólo para datos y estados.
 - Forma: tarjetas y campos rectos; píldoras sólo para acciones principales.
 - Composición: editorial, asimétrica, con fotografía/captura como evidencia.
-- Archivo: cuatro capítulos anclables y grilla compacta 3/2/1; no confundir “caso” con “repositorio público”.
+- Archivo: tres capítulos anclables y grilla compacta 4/2/1; no confundir “caso” con “repositorio público”.
 - Hero: entrada escalonada por máscaras, paralaje leve y CTA visible.
 - CTAs en píldora: componente compartido `AnimatedPillLink`, con barrido circular direccional de 600ms y fallback sin desplazamiento.
 - Loop: una sola cinta tecnológica; no agregar otra marquesina.
@@ -140,10 +140,9 @@ La fuente normativa completa es `DESIGN.md`. Estas invariantes permiten a un age
 
 La matriz completa vive en `PROJECTS.md` y `VERIFICATION.md`. Resumen para el siguiente agente:
 
-- Públicas y enlazadas: ZUBU Agency, Agroveterinaria Gross, Salazar Inmobiliaria, OrdenYa Natural, Yeryos, Norte Gaming, Tienda EMAG, Tienda Mamayucca y Nutriado.
+- Públicas y enlazadas: ZUBU Agency, Agroveterinaria Gross tienda, Ceferina, Tienda OrdenYa, Yeryos, Tienda EMAG, EMAG Inmersivo, Tienda Mamayucca y Nutriado.
 - Públicas con código confirmado: los repositorios que `lib/projects.ts` enlaza explícitamente.
-- Privadas por credenciales o PIN: BarberAdmin, ERP OrdenYa y ERP Mamayucca.
-- No disponible: ZUBU Rentals no resolvió DNS durante la verificación.
+- Privadas por credenciales o PIN: ERP OrdenYa y ERP Mamayucca.
 - Inválida: la ruta compartida de Tienda Mamayucca `/ZUBU` terminó en 404; se usa el dominio público válido de Mamayucca.
 - Dokploy: no se inició sesión, no se recuperaron credenciales y no se documentan paneles, IPs o IDs internos.
 
@@ -152,8 +151,8 @@ La matriz completa vive en `PROJECTS.md` y `VERIFICATION.md`. Resumen para el si
 | Nivel | Qué verifica | Estado |
 |---|---|---|
 | Tipos | Integridad del modelo y componentes | `npm run typecheck` pasa |
-| Producción | Compilación y prerender de todas las rutas | `npm run build` pasa |
-| Lint | Reglas estáticas | Bloqueado por toolchain, no por hallazgos de código |
+| Producción | Compilación y prerender de todas las rutas | Revalidar `npm run build` tras la iteración de 27 casos |
+| Lint | Reglas estáticas | `npm run lint` pasa |
 | Navegador | Hero, menú, grilla, casos y consola | Revisado en 390px y 1440px |
 | Accesibilidad | Skip link, foco, semántica y reduced motion | Skip link comprobado; auditoría manual final pendiente antes de publicar |
 | Enlaces | Demo pública vs. login/404/DNS | Verificado y documentado el 27/08/2026 |
@@ -188,7 +187,7 @@ Todo cambio visual debe volver a probar 390px, 768px y 1440px. Todo cambio en pr
 
 - Migración a Next.js/React/TypeScript/Motion.
 - Sistema visual tinta/papel/naranja y hero cinético.
-- Índice de 28 casos y generación estática de 28 rutas.
+- Índice de 27 casos y generación estática de 27 rutas.
 - Capturas públicas locales y placeholders honestos para casos privados.
 - Documentación de producto, diseño, evidencia, verificación y siguientes pasos.
 - Responsive móvil/escritorio, corrección de títulos largos, menú y skip link.
@@ -203,8 +202,6 @@ P0 Evidencia privada autorizada ──┬──> completar casos privados
 
 Dominio resuelto ───────────────────> metadata + sitemap + robots + OG
 
-P0 Aprobación de tooling ───────────> TypeScript 6.x ──> lint operativo
-
 P1 Contenido completo ──────────────> QA 390/768/1440 + A11Y + Lighthouse
                                       └──> publicación autorizada
 ```
@@ -214,7 +211,7 @@ El backlog ejecutable está en `tasks/todo.md`; el orden y rollback están en `t
 ## 13. Criterios de aceptación globales
 
 1. `npm run typecheck` termina con código 0.
-2. `npm run build` termina con código 0 y prerenderiza las 28 rutas de proyecto.
+2. `npm run build` termina con código 0 y prerenderiza las 27 rutas de proyecto.
 3. Ninguna página produce scroll horizontal a 390px, 768px o 1440px.
 4. El primer `Tab` desde una carga limpia enfoca “Saltar al contenido”.
 5. `prefers-reduced-motion` elimina paralaje y loop continuo sin ocultar contenido.
@@ -234,10 +231,9 @@ El backlog ejecutable está en `tasks/todo.md`; el orden y rollback están en `t
 
 ## 15. Preguntas abiertas para Tobías
 
-1. ¿Autoriza fijar TypeScript 6.x para recuperar ESLint?
-2. ¿Qué capturas y módulos de ERP Mamayucca, Bot Mamayucca, Facturación, Misiones Muebles, Nico Scraper, Ceferina, Zuzaniuk y BarberAdmin pueden publicarse?
-3. ¿Cuál es la URL vigente de ZUBU Rentals?
-4. ¿Se mantendrá el alias `portfolio-nextjs-v2-ashen.vercel.app` o se configurará un dominio personalizado más adelante?
+1. ¿Qué capturas de ERP Mamayucca, Bot Mamayucca, Facturación, Misiones Muebles, Nico Scraper y ERP OrdenYa están autorizadas para publicación?
+2. ¿Cuál es la URL oficial de Facebook de ZUBU Agency?
+3. ¿Zuzaniuk tendrá una demo pública o debe permanecer como caso documentado con repositorio privado?
 
 ## 16. Rollback
 

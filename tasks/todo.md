@@ -6,7 +6,7 @@ Cada tarea cabe en una sesión enfocada y debe actualizar la documentación rela
 
 - [x] Migrar el portfolio a Next.js, React, TypeScript y Motion.
 - [x] Implementar el sistema visual y de movimiento documentado en `DESIGN.md`.
-- [x] Crear 28 rutas de proyecto desde `lib/projects.ts`.
+- [x] Crear y mantener 27 rutas de proyecto desde `lib/projects.ts`.
 - [x] Verificar y capturar las demos públicas disponibles.
 - [x] Crear fallback editorial para proyectos privados o sin evidencia.
 - [x] Validar typecheck, build, consola, teclado y responsive principal.
@@ -18,10 +18,10 @@ Cada tarea cabe en una sesión enfocada y debe actualizar la documentación rela
   - Verify: `/robots.txt`, `/sitemap.xml`, metadata y rutas principales responden HTTP 200.
   - Files: `app/layout.tsx`, `app/sitemap.ts`, `app/robots.ts`, `VERIFICATION.md`.
 
-- [ ] Autorizar y aplicar una versión TypeScript compatible con ESLint.
+- [x] Verificar ESLint con el toolchain fijado.
   - Acceptance: `npm run lint`, `npm run typecheck` y `npm run build` terminan con código 0.
-  - Verify: ejecutar los tres comandos sin instalar tooling global.
-  - Files: `package.json`, `package-lock.json`, `VERIFICATION.md`, `NEXT_STEPS.md`.
+  - Verify: los tres comandos pasaron el 28 de agosto de 2026 sin cambiar dependencias.
+  - Files: `VERIFICATION.md`, `NEXT_STEPS.md`.
 
 - [ ] Completar ERP Mamayucca con evidencia autorizada.
   - Acceptance: módulos, stack, responsabilidad y resultado están confirmados; las capturas no contienen datos operativos.
@@ -33,22 +33,22 @@ Cada tarea cabe en una sesión enfocada y debe actualizar la documentación rela
   - Verify: no hay credenciales, comprobantes reales ni endpoints privados en el diff.
   - Files: `lib/projects.ts`, `public/project-covers/`, `PROJECTS.md`.
 
-- [ ] Completar Misiones Muebles, Nico Scraper, Ceferina, Zuzaniuk y BarberAdmin.
+- [ ] Completar Misiones Muebles, Nico Scraper y la publicación opcional de Zuzaniuk.
   - Acceptance: cada caso tiene problema, usuario, stack, responsabilidad, resultado y evidencia autorizada, o conserva explícitamente su estado pendiente.
   - Verify: enlaces públicos sin login y build de las rutas.
-  - Files: `lib/projects.ts`, `public/project-covers/`, `PROJECTS.md`, `VERIFICATION.md`.
-
-- [ ] Revalidar o reemplazar ZUBU Rentals.
-  - Acceptance: una URL vigente responde sin login o el caso continúa sin enlace y explica por qué.
-  - Verify: navegación limpia, captura local y actualización de fecha.
   - Files: `lib/projects.ts`, `public/project-covers/`, `PROJECTS.md`, `VERIFICATION.md`.
 
 ## Pendiente antes de publicar
 
 - [x] Verificar y publicar la iteración de archivo por categorías.
-  - Acceptance: el CTA completo destaca en portada; `/proyectos` presenta cuatro capítulos; las miniaturas son compactas; los CTAs de píldora barren desde abajo y salen por arriba; no hay overflow en 390px, 768px ni 1440px.
+  - Acceptance: el CTA completo destaca en portada; `/proyectos` presenta tres capítulos; las miniaturas son compactas; los CTAs de píldora barren desde abajo y salen por arriba; no hay overflow en 390px, 768px ni 1440px.
   - Verify: `npm run typecheck`, `npm run build`, teclado, scroll, hover y `prefers-reduced-motion`; luego commit/push/deploy sólo con autorización.
   - Files: `app/page.tsx`, `app/proyectos/page.tsx`, `components/project-grid.tsx`, `lib/projects.ts`, `app/globals.css`, documentación relacionada.
+
+- [x] Reorganizar productos, compactar el archivo y sumar contacto/ZUBU.
+  - Acceptance: comercio aparece primero; ERP, tienda y bot son fichas separadas; hay ocho destacados, acceso al archivo arriba y abajo, menú de contacto accesible y sección de ZUBU como agencia cofundada.
+  - Verify: 27 tarjetas y tres grupos; build de 35 páginas; 390/768/1440 sin overflow; GIF cargados; Escape y foco inicial comprobados.
+  - Files: `lib/projects.ts`, `app/page.tsx`, `app/proyectos/page.tsx`, `components/contact-menu.tsx`, `components/project-visual.tsx`, `app/globals.css`, portadas y documentación.
 
 - [x] Crear Open Graph propio.
   - Acceptance: imagen local optimizada, metadata completa y preview legible.

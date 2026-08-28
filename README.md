@@ -1,6 +1,6 @@
 # Portfolio de Tobías Tarnowski
 
-Portfolio editorial construido con Next.js, React, TypeScript y Motion. Presenta 28 casos entre automatización, IA, software, comercio, redes, infraestructura y hardware.
+Portfolio editorial construido con Next.js, React, TypeScript y Motion. Presenta 27 casos entre comercio, software, ERP, bots, automatización, IA, redes, infraestructura y hardware.
 
 - Repositorio: `https://github.com/trobias/portfolio-nextjs-v2`
 - Producción: `https://portfolio-nextjs-v2-ashen.vercel.app`
@@ -13,7 +13,7 @@ npm run typecheck
 npm run build
 ```
 
-`npm run lint` está documentado como bloqueado por la incompatibilidad entre TypeScript 7 y `typescript-eslint`; no cambies versiones sin autorización.
+`npm run lint`, `npm run typecheck` y `npm run build` pasan con las versiones fijadas; no cambies dependencias sin autorización.
 
 ## Lectura para humanos y agentes
 

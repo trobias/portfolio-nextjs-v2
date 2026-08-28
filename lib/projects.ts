@@ -5,10 +5,20 @@ export type ProjectAccess = {
   detail: string;
 };
 
+export type ProjectGroupId = "automation" | "commerce" | "brand" | "infrastructure";
+
+export type ProjectGroup = {
+  id: ProjectGroupId;
+  index: string;
+  label: string;
+  description: string;
+};
+
 export type Project = {
   slug: string;
   title: string;
   category: string;
+  group: ProjectGroupId;
   year: string;
   index: string;
   summary: string;
@@ -30,6 +40,7 @@ export const projects: Project[] = [
     slug: "tienda-mamayucca",
     title: "Tienda Mamayucca",
     category: "Comercio digital + producto",
+    group: "commerce",
     year: "2026",
     index: "01",
     summary: "Tienda pública para presentar productos misioneros, recetas y recorridos de compra minorista y mayorista.",
@@ -51,6 +62,7 @@ export const projects: Project[] = [
     slug: "agroveterinaria-gross",
     title: "Agroveterinaria Gross",
     category: "Sistema + e-commerce",
+    group: "commerce",
     year: "2026",
     index: "02",
     summary: "Sitio institucional y tienda online para una veterinaria, pet shop y farmacia con operación en Oberá.",
@@ -75,6 +87,7 @@ export const projects: Project[] = [
     slug: "zubu-agency",
     title: "ZUBU Agency / Landing",
     category: "Agencia + automatización",
+    group: "brand",
     year: "2026",
     index: "03",
     summary: "Landing comercial para una agencia de automatización, software a medida, bots e integraciones.",
@@ -100,6 +113,7 @@ export const projects: Project[] = [
     slug: "emag-subot",
     title: "EMAG + SUBOT / Pedidos por WhatsApp",
     category: "Automatización + IA",
+    group: "automation",
     year: "2025",
     index: "04",
     summary: "Un carrito completo dentro de WhatsApp: catálogo, stock, ubicación, pagos y derivación a una persona.",
@@ -130,6 +144,7 @@ export const projects: Project[] = [
     slug: "jarvis-workspace",
     title: "Jarvis / Workspace en WhatsApp",
     category: "Automatización + IA",
+    group: "automation",
     year: "2025",
     index: "05",
     summary: "Un asistente que convierte mensajes y audios en acciones sobre Gmail, Calendar, Drive y Sheets.",
@@ -156,6 +171,7 @@ export const projects: Project[] = [
     slug: "facturacion-mercadopago-arca",
     title: "Facturación Mercado Pago + ARCA",
     category: "Finanzas + automatización",
+    group: "automation",
     year: "En curso",
     index: "06",
     summary: "Integración para conectar cobros de Mercado Pago con el circuito de facturación fiscal de ARCA/exAFIP.",
@@ -175,6 +191,7 @@ export const projects: Project[] = [
     slug: "erp-mamayucca",
     title: "ERP Mamayucca",
     category: "Operaciones + software",
+    group: "automation",
     year: "En curso",
     index: "07",
     summary: "Sistema interno para centralizar la operación de Mamayucca y conectar información comercial en un único flujo.",
@@ -193,6 +210,7 @@ export const projects: Project[] = [
     slug: "bot-mamayucca",
     title: "Bot Mamayucca",
     category: "Conversación + automatización",
+    group: "automation",
     year: "En curso",
     index: "08",
     summary: "Automatización conversacional vinculada al ecosistema comercial de Mamayucca.",
@@ -211,6 +229,7 @@ export const projects: Project[] = [
     slug: "misiones-muebles",
     title: "Misiones Muebles",
     category: "Sistema + comercio",
+    group: "commerce",
     year: "En curso",
     index: "09",
     summary: "Proyecto desplegado en infraestructura privada y documentado como caso de sistema comercial.",
@@ -229,6 +248,7 @@ export const projects: Project[] = [
     slug: "nico-scraper",
     title: "Nico Scraper",
     category: "Datos + automatización",
+    group: "automation",
     year: "En curso",
     index: "10",
     summary: "Proyecto de extracción y procesamiento de datos pendiente de documentación pública.",
@@ -247,6 +267,7 @@ export const projects: Project[] = [
     slug: "ceferina-accesorios",
     title: "Ceferina Accesorios",
     category: "Comercio digital",
+    group: "commerce",
     year: "En curso",
     index: "11",
     summary: "Caso comercial incorporado al archivo, pendiente de validar su dominio, alcance técnico e imágenes propias.",
@@ -265,6 +286,7 @@ export const projects: Project[] = [
     slug: "yeryos",
     title: "Yeryos",
     category: "E-commerce + marca",
+    group: "commerce",
     year: "2026",
     index: "12",
     summary: "Tienda pública de mates, blends y bombillas construida alrededor de la idea de compartir momentos.",
@@ -285,6 +307,7 @@ export const projects: Project[] = [
     slug: "zuzaniuk",
     title: "Zuzaniuk",
     category: "Producto digital",
+    group: "brand",
     year: "En curso",
     index: "13",
     summary: "Proyecto incorporado como caso interno, pendiente de fuentes públicas y una descripción técnica validada.",
@@ -303,6 +326,7 @@ export const projects: Project[] = [
     slug: "salazar-inmobiliaria",
     title: "Salazar Inmobiliaria",
     category: "Marketing + real estate",
+    group: "brand",
     year: "2026",
     index: "14",
     summary: "Landing inmobiliaria pública para explorar propiedades, emprendimientos y canales de contacto en Posadas.",
@@ -323,6 +347,7 @@ export const projects: Project[] = [
     slug: "ordenya",
     title: "OrdenYa ERP + Catálogo",
     category: "ERP + comercio B2B/B2C",
+    group: "automation",
     year: "2026",
     index: "15",
     summary: "Sistema de gestión con acceso privado y un catálogo comercial público conectado a pedidos y segmentos de precio.",
@@ -343,6 +368,7 @@ export const projects: Project[] = [
     slug: "barberadmin",
     title: "BarberAdmin",
     category: "Sistema de gestión",
+    group: "automation",
     year: "2026",
     index: "16",
     summary: "Panel privado para la gestión operativa de una barbería.",
@@ -361,6 +387,7 @@ export const projects: Project[] = [
     slug: "norte-gaming",
     title: "Norte Gaming",
     category: "E-commerce + marketing",
+    group: "commerce",
     year: "2026",
     index: "17",
     summary: "E-commerce público de periféricos gamer con catálogo visual, búsqueda, categorías y atención directa.",
@@ -381,6 +408,7 @@ export const projects: Project[] = [
     slug: "zubu-rentals",
     title: "ZUBU Rentals",
     category: "Marketing + reservas",
+    group: "brand",
     year: "En revisión",
     index: "18",
     summary: "Proyecto de marketing y reservas incorporado al archivo mientras se recupera su dominio público.",
@@ -399,6 +427,7 @@ export const projects: Project[] = [
     slug: "linkedin-rag",
     title: "Asistente IA para RR.HH.",
     category: "Automatización + IA",
+    group: "automation",
     year: "2025",
     index: "19",
     summary: "Búsqueda semántica y respuestas con contexto sobre perfiles y empresas de LinkedIn.",
@@ -422,6 +451,7 @@ export const projects: Project[] = [
     slug: "simulador-procesos",
     title: "Procesos en memoria / Arduino",
     category: "Hardware + IoT",
+    group: "infrastructure",
     year: "2025",
     index: "20",
     summary: "Representación física del manejo de memoria y procesos de un sistema operativo, construida con LEDs y Arduino.",
@@ -445,6 +475,7 @@ export const projects: Project[] = [
     slug: "nutriado",
     title: "Nutriado / Asistente nutricional",
     category: "Automatización + IA",
+    group: "automation",
     year: "2025",
     index: "21",
     summary: "Landing y asistente nutricional con IA, automatizaciones y persistencia de datos.",
@@ -468,6 +499,7 @@ export const projects: Project[] = [
     slug: "nuevo-quaranta",
     title: "Nuevo Quaranta / Espacio 3D",
     category: "Diseño + 3D",
+    group: "infrastructure",
     year: "2024",
     index: "22",
     summary: "Modelado arquitectónico para planificar una transformación espacial antes de construirla.",
@@ -497,6 +529,7 @@ export const projects: Project[] = [
     slug: "hackobo",
     title: "Hackobo / Seguridad de redes",
     category: "Redes + seguridad",
+    group: "infrastructure",
     year: "2024",
     index: "23",
     summary: "Análisis de vulnerabilidades y documentación de una práctica académica de pentesting.",
@@ -514,6 +547,7 @@ export const projects: Project[] = [
     slug: "animabed",
     title: "Animabed / E-commerce circular",
     category: "Desarrollo web",
+    group: "commerce",
     year: "2024",
     index: "24",
     summary: "E-commerce académico para camas de mascotas fabricadas con neumáticos recuperados.",
@@ -537,6 +571,7 @@ export const projects: Project[] = [
     slug: "gns3-topologia",
     title: "Topología dinámica / GNS3",
     category: "Redes + seguridad",
+    group: "infrastructure",
     year: "2024",
     index: "25",
     summary: "Simulación de una red con routers, switches y protocolos de enrutamiento dinámico.",
@@ -554,6 +589,7 @@ export const projects: Project[] = [
     slug: "enlaces-inalambricos",
     title: "Enlaces inalámbricos / PTP + PTMP",
     category: "Redes + seguridad",
+    group: "infrastructure",
     year: "2024",
     index: "26",
     summary: "Diseño y optimización de enlaces punto a punto y multipunto con Ubiquiti y Mikrotik.",
@@ -571,6 +607,7 @@ export const projects: Project[] = [
     slug: "begapanku",
     title: "Begapanku / Cubo interactivo",
     category: "Diseño + 3D",
+    group: "infrastructure",
     year: "2024",
     index: "27",
     summary: "Cubo físico con pantallas, LEDs y Raspberry Pi para resolver acertijos visuales.",
@@ -591,6 +628,7 @@ export const projects: Project[] = [
     slug: "horno-arduino",
     title: "Control térmico / Arduino",
     category: "Hardware + IoT",
+    group: "infrastructure",
     year: "2024",
     index: "28",
     summary: "Control automático de temperatura con sensores y relés para una regulación térmica precisa.",
@@ -608,6 +646,38 @@ export const projects: Project[] = [
     tone: "orange",
   },
 ];
+
+export const projectGroups: ProjectGroup[] = [
+  {
+    id: "automation",
+    index: "01",
+    label: "Sistemas, automatización e IA",
+    description: "Operaciones, asistentes y flujos que conectan datos, decisiones y tareas repetitivas.",
+  },
+  {
+    id: "commerce",
+    index: "02",
+    label: "Comercio y plataformas",
+    description: "Tiendas, catálogos y productos digitales construidos alrededor de una operación real.",
+  },
+  {
+    id: "brand",
+    index: "03",
+    label: "Marca, web y experiencias",
+    description: "Superficies públicas que convierten una propuesta, un servicio o un espacio en un recorrido claro.",
+  },
+  {
+    id: "infrastructure",
+    index: "04",
+    label: "Infraestructura, hardware y 3D",
+    description: "Redes, dispositivos y prototipos donde el sistema también ocupa espacio físico.",
+  },
+];
+
+export const groupedProjects = projectGroups.map((group) => ({
+  ...group,
+  projects: projects.filter((project) => project.group === group.id),
+}));
 
 export const featuredProjects = projects.filter((project) => project.featured);
 

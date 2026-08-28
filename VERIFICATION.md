@@ -36,7 +36,20 @@ Producción: `https://portfolio-nextjs-v2-ashen.vercel.app`, proyecto Vercel ind
 - Catálogo: 28 tarjetas renderizadas y ancho del documento igual al viewport.
 - `prefers-reduced-motion`: el código elimina desplazamientos esenciales y detiene el marquee; falta una pasada manual final en dos navegadores antes de publicar.
 
-Las capturas de revisión están en `.impeccable/review/desktop-home.png` y `.impeccable/review/mobile-home.png`.
+Las capturas de revisión base están en `.impeccable/review/desktop-home.png` y `.impeccable/review/mobile-home.png`.
+
+## Iteración del archivo por categorías
+
+Se verificó localmente la puerta visual al archivo, las miniaturas compactas, los cuatro grupos estructurales de `/proyectos` y el barrido circular direccional de los CTAs principales.
+
+- `npm ci`: 337 paquetes fijados instalados, 0 vulnerabilidades reportadas.
+- `npm run typecheck`: pasa.
+- `npm run build`: pasa y genera las 36 rutas estáticas.
+- `npm run lint`: continúa bloqueado por `typescript-eslint` con TypeScript 7.0, antes de analizar el código del proyecto.
+- Revisión visual: 390px, 768px y 1440px sin pérdida horizontal después de ajustar el título, la introducción y el conteo móvil.
+- Capturas nuevas: `.impeccable/review/archive-top-390.png`, `.impeccable/review/archive-top-768.png` y `.impeccable/review/archive-groups-1440.png`.
+
+La publicación y la comprobación del alias de producción se registran después del push autorizado; hasta entonces, los resultados anteriores de producción siguen describiendo el commit desplegado.
 
 ## Verificación de enlaces aportados
 

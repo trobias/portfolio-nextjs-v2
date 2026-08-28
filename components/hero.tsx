@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 
+import { AnimatedPillLink } from "@/components/animated-pill-link";
 import { ArrowIcon } from "@/components/arrow-icon";
 
 const lineTransition = {
@@ -72,10 +73,10 @@ export function Hero() {
           <p>
             Diseño y construyo sistemas que conectan <strong>IA, automatización, redes y hardware</strong> para resolver trabajo real.
           </p>
-          <a className="heroCta" href="#proyectos">
+          <AnimatedPillLink className="heroCta" href="#proyectos">
             Ver proyectos
             <ArrowIcon />
-          </a>
+          </AnimatedPillLink>
         </motion.div>
       </div>
 

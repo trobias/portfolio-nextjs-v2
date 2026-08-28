@@ -23,7 +23,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 ## Architecture
 
 - Next.js App Router, React, TypeScript and CSS live in `app/`, `components/` and `lib/`.
-- Project content is centralized in `lib/projects.ts`; every project must keep a stable slug and route.
+- Project content and the four archive groups are centralized in `lib/projects.ts`; every project must keep a stable slug, route, specific `category` and top-level `group`.
 - Historical evidence lives under `public/proyectos/`; new verified demo captures live under `public/project-covers/`.
 - The legacy root `index.html` and `styles.css` are preserved until the user explicitly approves archiving or deletion.
 
@@ -38,6 +38,8 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 - Use only the orange signal accent defined in `DESIGN.md`; do not add a second brand color or gradient text.
 - Preserve the editorial, asymmetric, sharp-cornered composition. Pills are for primary actions, not generic containers.
 - Keep one continuous marquee maximum. Motion must use shared easing, transform/opacity or bounded clipping, and respect `prefers-reduced-motion`.
+- Reuse `components/animated-pill-link.tsx` for primary pill links; its bottom-in/top-out fill sweep is part of the signature interaction and must retain keyboard and reduced-motion behavior.
+- Keep `/proyectos` grouped into the four documented archive chapters and preserve its compact 3/2/1 responsive grid unless the information architecture changes in `SPEC.md` and `DESIGN.md` first.
 - Content must remain visible if animation JavaScript fails. Gate hover motion behind `(hover: hover) and (pointer: fine)`.
 - All interactive targets need keyboard focus and at least 44px of usable touch area.
 

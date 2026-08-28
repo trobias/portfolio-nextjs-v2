@@ -45,6 +45,11 @@ Cada tarea cabe en una sesión enfocada y debe actualizar la documentación rela
 
 ## Pendiente antes de publicar
 
+- [ ] Verificar y publicar la iteración de archivo por categorías.
+  - Acceptance: el CTA completo destaca en portada; `/proyectos` presenta cuatro capítulos; las miniaturas son compactas; los CTAs de píldora barren desde abajo y salen por arriba; no hay overflow en 390px, 768px ni 1440px.
+  - Verify: `npm run typecheck`, `npm run build`, teclado, scroll, hover y `prefers-reduced-motion`; luego commit/push/deploy sólo con autorización.
+  - Files: `app/page.tsx`, `app/proyectos/page.tsx`, `components/project-grid.tsx`, `lib/projects.ts`, `app/globals.css`, documentación relacionada.
+
 - [x] Crear Open Graph propio.
   - Acceptance: imagen local optimizada, metadata completa y preview legible.
   - Verify: inspección de metadata y build.

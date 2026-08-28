@@ -90,6 +90,7 @@ type Project = {
   slug: string;
   title: string;
   category: string;
+  group: "automation" | "commerce" | "brand" | "infrastructure";
   year: string;
   index: string;
   summary: string;
@@ -109,6 +110,8 @@ type Project = {
 };
 ```
 
+`group` controla únicamente la arquitectura del índice `/proyectos`; `category` conserva la descripción específica de cada caso. Las cuatro familias y sus textos viven junto a los proyectos en `lib/projects.ts`, de modo que el conteo y el contenido no se dupliquen en la vista.
+
 ### Invariantes de evidencia
 
 1. `Demo pública` exige navegación sin login y sin acciones administrativas expuestas.
@@ -125,7 +128,9 @@ La fuente normativa completa es `DESIGN.md`. Estas invariantes permiten a un age
 - Tipos: Archivo para contenido; IBM Plex Mono sólo para datos y estados.
 - Forma: tarjetas y campos rectos; píldoras sólo para acciones principales.
 - Composición: editorial, asimétrica, con fotografía/captura como evidencia.
+- Archivo: cuatro capítulos anclables y grilla compacta 3/2/1; no confundir “caso” con “repositorio público”.
 - Hero: entrada escalonada por máscaras, paralaje leve y CTA visible.
+- CTAs en píldora: componente compartido `AnimatedPillLink`, con barrido circular direccional de 600ms y fallback sin desplazamiento.
 - Loop: una sola cinta tecnológica; no agregar otra marquesina.
 - Rendimiento: animar transform, opacidad o recorte acotado; evitar reflow.
 - Fallback: el contenido debe quedar visible si falla el JavaScript de animación.

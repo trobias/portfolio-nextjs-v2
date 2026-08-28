@@ -11,16 +11,18 @@
 
 ## P1 — Mejoras posteriores a la publicación
 
-1. Revalidar todos los enlaces públicos y revisar que ninguna demo haya agregado login.
-2. Reemplazar portadas editoriales por capturas reales sólo cuando exista autorización.
-3. Open Graph y Twitter card creados estáticamente con diseño editorial (`/opengraph-image`, `/twitter-image`).
-4. Ejecutar Lighthouse sobre `https://portfolio-nextjs-v2-ashen.vercel.app` para LCP, CLS, INP, accesibilidad y SEO.
-5. Probar teclado, 200% de zoom y `prefers-reduced-motion` en Chrome/Edge y Firefox.
-6. Decidir si los archivos estáticos legacy de la raíz (`index.html`, `styles.css`) se archivan o eliminan; se conservaron para no borrar trabajo sin aprobación.
+1. Publicar la iteración ya verificada y comprobar portada, archivo y una ficha sobre el alias de producción.
+2. Revalidar todos los enlaces públicos y revisar que ninguna demo haya agregado login.
+3. Reemplazar portadas editoriales por capturas reales sólo cuando exista autorización.
+4. Open Graph y Twitter card creados estáticamente con diseño editorial (`/opengraph-image`, `/twitter-image`).
+5. Ejecutar Lighthouse sobre `https://portfolio-nextjs-v2-ashen.vercel.app` para LCP, CLS, INP, accesibilidad y SEO.
+6. Probar teclado, hover real, zoom 200% y `prefers-reduced-motion` en Chrome/Edge y Firefox.
+7. Decidir si los archivos estáticos legacy de la raíz (`index.html`, `styles.css`) se archivan o eliminan; se conservaron para no borrar trabajo sin aprobación.
+
 
 ## P2 — Evolución opcional
 
-- Filtros por área sólo si los 28 casos se vuelven difíciles de recorrer; la URL individual de cada caso ya existe.
+- Filtros interactivos sólo si los cuatro capítulos actuales dejan de ser suficientes; cada caso ya conserva una URL estable y una categoría específica.
 - Transiciones de vista entre tarjeta y ficha si aportan continuidad y tienen fallback accesible.
 - Una secuencia GSAP/ScrollTrigger únicamente si aparece una historia realmente dependiente del scroll; hoy Motion + CSS cubren el sistema con menor costo.
 - CMS o fuente de datos externa cuando el ritmo de actualización justifique abandonar `lib/projects.ts`.

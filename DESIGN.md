@@ -113,7 +113,7 @@ La paleta es restringida: un naranja de señal contra tinta casi negra y dos pap
 
 El margen horizontal usa `clamp(1rem, 3vw, 3rem)`. Las secciones alternan grillas de dos columnas, filas editoriales y campos a ancho completo; no hay una matriz visible decorativa. El espaciado vertical escala entre 5 y 11rem para separar capítulos, con más aire antes de un título que después.
 
-Los proyectos destacados usan una grilla de dos columnas donde cada tercer caso ocupa todo el ancho. En móvil, todo pasa a una sola columna y el contenido principal aparece antes que la explicación secundaria. Los puntos de control principales son 700px y 900px; se verifica además en 390px, 768px y 1440px.
+Los proyectos destacados usan una grilla de dos columnas donde cada tercer caso ocupa todo el ancho. El archivo completo se divide en cuatro capítulos explícitos —sistemas/automatización/IA, comercio/plataformas, marca/web/experiencias e infraestructura/hardware/3D— y usa una grilla más compacta de tres columnas, dos en tablet y una en móvil. Cada capítulo mantiene un ancla estable, conteo, descripción y categoría específica por tarjeta. Los puntos de control principales son 700px y 900px; se verifica además en 390px, 768px y 1440px.
 
 **The Pace Rule.** Una región densa siempre desemboca en una región quieta; no concatenar seis secciones con el mismo patrón de tarjetas.
 
@@ -129,7 +129,7 @@ Los botones pueden adquirir un cambio leve de color y escala al interactuar. Las
 
 ## Shapes
 
-Las superficies, capturas, tarjetas y etiquetas tienen esquinas rectas. Los botones de acción principales son la única forma persistentemente redondeada. Las imágenes se recortan en relaciones 2:1, 4:3 o 16:8 según jerarquía, siempre con dimensiones reservadas.
+Las superficies, capturas, tarjetas y etiquetas tienen esquinas rectas. Los botones de acción principales son la única forma persistentemente redondeada. Las imágenes de grilla se recortan en 16:10; las destacadas de ancho completo usan 21:8 para sostener presencia sin ocupar una pantalla completa. Las portadas internas pueden usar 4:3 cuando la evidencia lo requiere. Todas reservan dimensiones.
 
 Las líneas divisorias son de 1px y baja opacidad. No se usan bordes laterales gruesos para producir énfasis; el énfasis se logra con escala, peso o cambio de campo.
 
@@ -139,7 +139,7 @@ Las líneas divisorias son de 1px y baja opacidad. No se usan bordes laterales g
 
 - **Shape:** píldora de acción completa (`999px`) con altura mínima de 56–58px.
 - **Primary:** naranja señal sobre tinta, padding de 14px × 24px.
-- **Hover / Focus:** cambio de fondo en 180ms y foco visible; `:active` aplica `scale(0.97)` durante 140–160ms.
+- **Hover / Focus:** los CTAs en píldora usan un `fill sweep` circular. Una capa de 150% × 200% entra desde abajo (`translateY(76%) → 0`) en 600ms y sale por arriba (`0 → -76%`) al abandonar el control; el color del contenido cambia con 100ms de retraso. El foco de teclado reproduce la entrada, `prefers-reduced-motion` resuelve el cambio sin desplazamiento y `:active` aplica `scale(0.97)` durante 140–160ms.
 - **Secondary:** enlace editorial con texto explícito y flecha del mismo sistema vectorial.
 
 ### Chips
@@ -168,6 +168,14 @@ Tres líneas aparecen mediante máscara vertical en 900ms con 80ms de separació
 ### Signature Component: Cinta tecnológica
 
 Es el único loop continuo de la página. Usa movimiento lineal de 38s, se pausa en hover y queda estática con movimiento reducido. No agregar una segunda marquesina.
+
+### Signature Component: Puerta al archivo
+
+El acceso desde la portada al índice completo ocupa un campo naranja de ancho completo, declara cantidad de casos y categorías, y usa un titular de cierre en lugar de un enlace secundario. En hover, una capa de papel cruza el campo mediante `scaleX` y la flecha avanza; no hay loop ni cambio de layout.
+
+### Movimiento del archivo por capítulos
+
+Los encabezados y tarjetas se asientan al entrar al viewport mediante `animation-timeline: view()` como mejora progresiva: `translate3d(0, 1.5rem, 0)` y opacidad 0.55 hacia su estado natural. Si el navegador no soporta scroll timelines, el contenido aparece estático y completo. `prefers-reduced-motion` elimina la animación.
 
 ## Do's and Don'ts
 

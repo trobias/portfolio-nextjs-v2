@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Announcement } from "@/components/announcement";
+import { AnimatedPillLink } from "@/components/animated-pill-link";
 import { ArrowIcon } from "@/components/arrow-icon";
 import { Hero } from "@/components/hero";
 import { ProjectGrid } from "@/components/project-grid";
@@ -75,12 +76,13 @@ export default function Home() {
           </p>
         </div>
         <ProjectGrid projects={featuredProjects} />
-        <div className="allProjectsRow">
-          <span>{projects.length} casos en total</span>
-          <Link href="/proyectos" className="textLink">
-            Ver índice completo <ArrowIcon />
-          </Link>
-        </div>
+        <Link href="/proyectos" className="archiveGateway">
+          <span className="archiveGatewayEyebrow">Archivo completo · 4 categorías</span>
+          <strong>VER LOS<br />{projects.length} CASOS.</strong>
+          <span className="archiveGatewayAction">
+            Explorar índice <ArrowIcon />
+          </span>
+        </Link>
       </section>
 
       <section id="enfoque" className="processSection sectionPad" aria-labelledby="process-title">
@@ -149,9 +151,9 @@ export default function Home() {
         <p className="contactIntro">¿Tenés un sistema por destrabar?</p>
         <h2 id="contact-title">HAGAMOS ALGO<br />QUE FUNCIONE.</h2>
         <div className="contactBottom">
-          <a className="contactButton" href="mailto:tobias.44276@gmail.com">
+          <AnimatedPillLink className="contactButton" href="mailto:tobias.44276@gmail.com">
             Escribime <ArrowIcon />
-          </a>
+          </AnimatedPillLink>
           <div className="contactDetails">
             <a href="mailto:tobias.44276@gmail.com">tobias.44276@gmail.com</a>
             <a href="https://wa.me/5493764260055" target="_blank" rel="noreferrer">+54 9 376 426 0055</a>

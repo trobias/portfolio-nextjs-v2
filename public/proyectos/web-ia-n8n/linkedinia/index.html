@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Asistente IA LinkedIn — Consultas de RR.HH. con RAG</title>
+  <link rel="stylesheet" href="../../../styles.css" />
+</head>
+
+<body>
+  <header class="sub-header">
+    <div class="container">
+      <a href="../index.html" class="btn-xs back">← Volver</a>
+      <h2>Asistente IA LinkedIn</h2>
+      <p class="subtitle">Consultas de RR.HH. con datos en tiempo real de LinkedIn (RAG con Cohere + FAISS)</p>
+    </div>
+  </header>
+
+  <main class="container project-demo">
+
+    <!-- Descripción -->
+    <section class="project-intro">
+      <h3>Descripción del proyecto</h3>
+      <p>
+        <strong>Asistente IA LinkedIn</strong> es un asistente conversacional para <strong>Recursos Humanos</strong> que responde
+        preguntas utilizando <strong>datos en tiempo real</strong> de perfiles, empleos y compañías en LinkedIn.
+        Implementa un enfoque de <strong>Generación Aumentada por Recuperación (RAG)</strong>, combinando
+        <strong>Cohere</strong> (embeddings y modelo de lenguaje) con <strong>FAISS</strong> (búsqueda semántica) y
+        <strong>LangChain</strong> para el enrutamiento/razonamiento. La interfaz está construida con <strong>Streamlit</strong>. 
+      </p>
+      <p>
+        Flujo general: se consultan datos vía API de LinkedIn, se generan embeddings con Cohere, se indexan en FAISS,
+        y ante cada pregunta del usuario se recupera el contexto más relevante para generar una respuesta precisa.
+      </p>
+      <p class="hint">
+        *En el repo se incluyen instrucciones para credenciales (.env con <code>RAPIDAPI_KEY</code> y <code>COHERE_API_KEY</code>) y ejecución con
+        <code>streamlit run LinkedInIARAGTarnowski.py</code>.
+      </p>
+    </section>
+
+    <!-- Tecnologías -->
+    <section class="project-details">
+      <h3>Tecnologías</h3>
+      <div class="kv">
+        <div><strong>Interfaz:</strong></div><div>Streamlit</div>
+        <div><strong>RAG:</strong></div><div>Cohere (embeddings + LLM) + FAISS</div>
+        <div><strong>Orquestación:</strong></div><div>LangChain</div>
+        <div><strong>Datos en tiempo real:</strong></div><div>LinkedIn API vía RapidAPI</div>
+        <div><strong>Lenguaje:</strong></div><div>Python</div>
+      </div>
+    </section>
+
+    <!-- Galería de imágenes -->
+    <section class="project-gallery">
+      <h3>Galería de imágenes</h3>
+      <div class="image-grid">
+        <img src="./streamlit-home.jpg" alt="Pantalla principal del asistente en Streamlit">
+        <img src="./librerias.jpg" alt="Chat: consulta de RR.HH. y respuesta con contexto">
+      </div>
+    </section>
+
+    <!-- Documentación -->
+    <section class="project-doc">
+      <h3>Documentación</h3>
+      <p>
+        Podés consultar el informe técnico completo del proyecto en el siguiente PDF:
+      </p>
+      <a href="AsistenteIALinkedIn.pdf" target="_blank" rel="noopener noreferrer" class="btn-xs primary">
+        Ver documento
+      </a>
+      <p class="hint">
+        (El archivo también está disponible en el repositorio de GitHub.)
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Tobías Tarnowski — Asistente IA LinkedIn</p>
+    </div>
+  </footer>
+</body>
+</html>

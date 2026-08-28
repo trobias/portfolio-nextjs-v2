@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuevo Quaranta — Galería</title>
+  <link rel="stylesheet" href="../../../styles.css" />
+  <style>
+    body {
+      background-color: #fafafa;
+    }
+
+    .gallery-container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .gallery-container h2 {
+      font-size: 26px;
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+
+    .gallery-container p {
+      color: #475569;
+      margin-bottom: 30px;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+    }
+
+    .image-grid img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .image-grid img:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 40px;
+      color: #a78bfa;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="sub-header">
+    <div class="container">
+      <a href="../index.html" class="btn-xs back">← Volver</a>
+      <h2>Nuevo Quaranta</h2>
+      <p class="subtitle">Galería de imágenes</p>
+    </div>
+  </header>
+
+  <main class="gallery-container">
+    <h2>Nuevo Quaranta</h2>
+    <p>Selección de imágenes del proyecto, mostrando detalles, planos y renders finales.</p>
+
+    <div class="image-grid">
+      <img src="./foto1.jpg" alt="Imagen 1 - Nuevo Quaranta">
+      <img src="./foto2.jpg" alt="Imagen 2 - Nuevo Quaranta">
+      <img src="./foto3.jpg" alt="Imagen 3 - Nuevo Quaranta">
+      <img src="./foto4.jpg" alt="Imagen 4 - Nuevo Quaranta">
+      <img src="./foto5.jpg" alt="Imagen 5 - Nuevo Quaranta">
+      <img src="./foto6.jpg" alt="Imagen 6 - Nuevo Quaranta">
+      <img src="./foto7.jpg" alt="Imagen 7 - Nuevo Quaranta">
+      <img src="./foto8.jpg" alt="Imagen 8 - Nuevo Quaranta">
+      <img src="./foto9.jpg" alt="Imagen 9 - Nuevo Quaranta">
+      <img src="./foto10.jpg" alt="Imagen 10 - Nuevo Quaranta">
+      <img src="./foto11.jpg" alt="Imagen 11 - Nuevo Quaranta">
+    </div>
+
+    <a href="../index.html" class="back-link">← Volver a proyectos</a>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Tobías Tarnowski — Proyecto Nuevo Quaranta</p>
+    </div>
+  </footer>
+</body>
+</html>

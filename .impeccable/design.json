@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-27T21:30:00-03:00",
+  "title": "Design System: Portfolio de Tobías Tarnowski",
+  "extensions": {
+    "colorMeta": {
+      "signal-orange": {
+        "role": "primary",
+        "displayName": "Naranja señal",
+        "canonical": "#ff5a36",
+        "tonalRamp": ["#3d0d05", "#6e1709", "#a62a14", "#d93f20", "#ff5a36", "#ff8066", "#ffad9d", "#ffe1da"]
+      },
+      "operational-ink": {
+        "role": "neutral",
+        "displayName": "Tinta operacional",
+        "canonical": "#0b0b0b",
+        "tonalRamp": ["#0b0b0b", "#202020", "#383838", "#575757", "#7a7a7a", "#a1a1a1", "#cecece", "#f2f2f2"]
+      },
+      "archive-paper": {
+        "role": "neutral",
+        "displayName": "Papel de archivo",
+        "canonical": "#efefe9",
+        "tonalRamp": ["#25251f", "#404039", "#5f5f57", "#818178", "#a5a59c", "#cacac2", "#e5e5de", "#f8f8f4"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Archivo Display", "purpose": "Titulares de primer viewport y capítulos." },
+      "body": { "displayName": "Archivo Body", "purpose": "Prosa, descripciones y navegación." },
+      "label": { "displayName": "Plex Metadata", "purpose": "Estado, categoría, fecha y tecnología." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "ease-out", "value": "cubic-bezier(0.23, 1, 0.32, 1)", "purpose": "Llegadas, subrayados y respuesta de controles." },
+      { "name": "ease-in-out", "value": "cubic-bezier(0.77, 0, 0.175, 1)", "purpose": "Movimiento continuo dentro de pantalla." },
+      { "name": "ui-fast", "value": "160ms", "purpose": "Press, foco y cambios de estado frecuentes." },
+      { "name": "hero-line", "value": "900ms + 80ms stagger", "purpose": "Secuencia focal de entrada del hero." }
+    ],
+    "breakpoints": [
+      { "name": "mobile", "value": "700px" },
+      { "name": "compact-nav", "value": "900px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "CTA naranja de alto contraste con respuesta física inmediata.",
+      "html": "<button class=\"ds-btn-primary\">VER PROYECTOS</button>",
+      "css": ".ds-btn-primary { background:#ff5a36; color:#0b0b0b; min-height:58px; padding:14px 24px; border:0; border-radius:999px; font:700 14px Archivo,Arial,sans-serif; transition:background-color 180ms ease,transform 160ms cubic-bezier(.23,1,.32,1); } .ds-btn-primary:hover { background:#f8f7f2; } .ds-btn-primary:active { transform:scale(.97); } .ds-btn-primary:focus-visible { outline:3px solid #ff5a36; outline-offset:4px; }"
+    },
+    {
+      "name": "Access Label",
+      "kind": "chip",
+      "refersTo": "status-label",
+      "description": "Etiqueta rectangular para demo, repositorio o caso privado.",
+      "html": "<span class=\"ds-access\">DEMO PÚBLICA</span>",
+      "css": ".ds-access { display:inline-block; background:#f8f7f2; color:#0b0b0b; padding:10px 12px; border-radius:0; font:600 10px 'IBM Plex Mono',monospace; letter-spacing:.06em; text-transform:uppercase; }"
+    },
+    {
+      "name": "Project Card",
+      "kind": "card",
+      "refersTo": "project-card",
+      "description": "Evidencia visual frontal, metadatos y título sin elevación decorativa.",
+      "html": "<a class=\"ds-card\" href=\"#\"><span class=\"ds-card-media\"></span><small>PRODUCTO DIGITAL</small><strong>PROYECTO</strong></a>",
+      "css": ".ds-card { display:grid; gap:12px; color:#f8f7f2; text-decoration:none; } .ds-card-media { display:block; aspect-ratio:4/3; background:#1a1a1a; } .ds-card small { border-top:1px solid rgba(255,255,255,.24); padding-top:14px; font:500 10px 'IBM Plex Mono',monospace; letter-spacing:.06em; } .ds-card strong { font:750 32px/1 Archivo,Arial,sans-serif; letter-spacing:-.04em; } .ds-card:focus-visible { outline:3px solid #ff5a36; outline-offset:4px; }"
+    },
+    {
+      "name": "Navigation Link",
+      "kind": "nav",
+      "refersTo": "navigation-link",
+      "description": "Enlace textual compacto con subrayado transformado y foco sólido.",
+      "html": "<a class=\"ds-nav\" href=\"#\">PROYECTOS</a>",
+      "css": ".ds-nav { color:inherit; min-height:44px; display:inline-flex; align-items:center; border-bottom:1px solid transparent; font:650 13px Archivo,Arial,sans-serif; text-decoration:none; transition:border-color 160ms ease; } .ds-nav:hover { border-color:currentColor; } .ds-nav:focus-visible { outline:3px solid #ff5a36; outline-offset:4px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "El tablero editorial en movimiento",
+    "overview": "El portfolio se comporta como una pieza editorial de gran formato atravesada por la energía de un sistema en ejecución. La personalidad es directa, técnica y humana; la densidad alterna bloques muy grandes con pausas amplias.",
+    "keyCharacteristics": [
+      "Tipografía de gran escala y composición asimétrica.",
+      "Negro, papel frío y un único naranja señal.",
+      "Fotografía o captura real cuando existe; portada editorial honesta cuando no.",
+      "Movimiento con jerarquía: una secuencia protagonista y estados secundarios breves."
+    ],
+    "rules": [
+      { "name": "The One Signal Rule", "body": "El naranja es el único acento cromático de marca; no introducir una segunda voz.", "section": "colors" },
+      { "name": "The Six-Rem Ceiling", "body": "Los titulares no superan 6rem y nunca se recortan.", "section": "typography" },
+      { "name": "The Pace Rule", "body": "Una región densa siempre desemboca en una región quieta.", "section": "layout" },
+      { "name": "The Flat Evidence Rule", "body": "Las capturas se presentan como evidencia frontal, sin mockups genéricos.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do usar capturas verificadas de demos públicas.",
+      "Do explicar cuándo un proyecto es privado o está pendiente.",
+      "Do animar transform, opacity y recortes acotados."
+    ],
+    "donts": [
+      "Don't copiar la identidad o estructura de ecommerce de NOTMID.",
+      "Don't inventar demos, métricas, tecnologías o capturas privadas.",
+      "Don't usar más de una cinta en loop ni transition: all."
+    ]
+  }
+}

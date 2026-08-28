@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jarvis — Google Workspace WhatsApp Chatbot</title>
+  <link rel="stylesheet" href="../../../styles.css" />
+</head>
+
+<body>
+  <header class="sub-header">
+    <div class="container">
+      <a href="../index.html" class="btn-xs back">← Volver</a>
+      <h2>Jarvis — Google Workspace WhatsApp Chatbot</h2>
+      <p class="subtitle">Asistente automatizado de Gmail, Calendar y Drive vía WhatsApp</p>
+    </div>
+  </header>
+
+  <main class="container project-demo">
+
+    <!-- Descripción -->
+    <section class="project-intro">
+      <h3>Descripción del proyecto</h3>
+      <p>
+        <strong>Jarvis</strong> es un asistente inteligente que conecta <strong>Google Workspace</strong> con 
+        <strong>WhatsApp</strong> para ejecutar tareas reales de productividad: enviar y leer correos, crear eventos en 
+        Calendar, listar archivos de Drive y responder con IA.
+      </p>
+      <p>
+        El sistema utiliza <strong>n8n</strong> como motor de automatización, integrado con 
+        <strong>Evolution API</strong> para la comunicación por WhatsApp. Desde allí, los usuarios pueden escribir 
+        comandos o mensajes naturales (“agendar reunión”, “leer mi último mail”, “buscar archivo en Drive”), y el 
+        flujo ejecuta las acciones correspondientes usando las APIs oficiales de <strong>Gmail, Drive y Calendar</strong>.
+      </p>
+      <p>
+        Además, incluye un módulo de <strong>IA conversacional</strong> (basado en <strong>Gemini / OpenAI</strong>) 
+        que interpreta mensajes ambiguos y permite consultas más naturales.  
+        Jarvis es un ejemplo de cómo un chatbot puede actuar como <em>hub personal de trabajo</em> dentro de WhatsApp.
+      </p>
+    </section>
+
+    <!-- Funcionamiento breve -->
+    <section class="project-features">
+      <h3>Funcionamiento resumido</h3>
+      <ul class="feature-list">
+        <li>Interfaz conversacional en WhatsApp conectada a <strong>Evolution API</strong>.</li>
+        <li>Automatizaciones con <strong>n8n</strong> para Gmail, Calendar y Drive.</li>
+        <li>Interpretación inteligente con <strong>IA (Gemini / OpenAI)</strong>.</li>
+        <li>Respuestas dinámicas: confirmación de correos enviados, eventos creados, archivos compartidos, etc.</li>
+        <li>Diseño modular y extensible mediante contenedores <strong>Docker</strong>.</li>
+      </ul>
+    </section>
+
+    <!-- Tecnologías -->
+    <section class="project-details">
+      <h3>Tecnologías</h3>
+      <div class="kv">
+        <div><strong>Automatización:</strong></div><div>n8n (nodos Code, HTTP y Google APIs)</div>
+        <div><strong>Mensajería:</strong></div><div>Evolution API (WhatsApp)</div>
+        <div><strong>Integraciones:</strong></div><div>Gmail, Google Drive, Google Calendar</div>
+        <div><strong>IA:</strong></div><div>Gemini / OpenAI API</div>
+        <div><strong>Infraestructura:</strong></div><div>Docker Compose</div>
+        <div><strong>Base de datos:</strong></div><div>Postgres (persistencia de flujos y usuarios)</div>
+        <div><strong>Lenguaje:</strong></div><div>JavaScript (n8n nodes)</div>
+      </div>
+    </section>
+
+    <!-- Galería -->
+    <section class="project-gallery">
+      <h3>Galería de imágenes</h3>
+      <div class="image-grid">
+        <img src="./jarvis-flow.jpg" alt="Flujo principal de Jarvis en n8n">
+        <img src="./google-sheets.jpg" alt="Búsqueda de archivos en Google Drive desde el chat">
+        <img src="./whatsapp.jpg" alt="Conversación del asistente Jarvis en WhatsApp">
+        <img src="./calendar.jpg" alt="Ejemplo de evento creado en Google Calendar">
+        <img src="./audio.jpg" alt="Búsqueda de archivos en Google Drive desde el chat">
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Tobías Tarnowski — Proyecto Jarvis</p>
+    </div>
+  </footer>
+</body>
+</html>

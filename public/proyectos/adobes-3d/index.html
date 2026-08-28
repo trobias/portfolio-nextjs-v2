@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adobe, SketchUp y 3D - Tobías Tarnowski</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <style>
+        .project-list {
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        .project-item {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 0;
+            margin-bottom: 24px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .project-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+        }
+
+        .project-cover {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .project-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .project-content {
+            padding: 24px;
+        }
+
+        .project-item h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #0f172a;
+        }
+
+        .project-item p {
+            color: #64748b;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .project-actions {
+            margin-top: 16px;
+        }
+
+        .btn-xs {
+            display: inline-block;
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            text-decoration: none;
+            font-weight: 600;
+            color: #0f172a;
+            background: #f8fafc;
+            font-size: 14px;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .btn-xs.primary {
+            background: #0f172a;
+            color: #ffffff;
+        }
+
+        .btn-xs:hover {
+            transform: scale(1.02);
+            background: #e2e8f0;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin: 40px 0 20px;
+            color: #a78bfa;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">TOBÍAS TARNOWSKI</h1>
+                <nav>
+                    <a href="../../index.html">Inicio</a>
+                    <a href="../../index.html#proyectos">Proyectos</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="projects">
+            <div class="container">
+                <a href="../../index.html" class="back-link">← Volver al inicio</a>
+                <h3>Adobe, Sketchup y 3D</h3>
+                <p class="projects-subtitle">Modelado, renders y producción audiovisual</p>
+
+                <div class="project-list">
+
+                    <!-- BEGAPANKU -->
+                    <div class="project-item">
+                        <div class="project-cover">
+                            <img src="./begapanku/cover.jpg" alt="Cover Begapanku">
+                        </div>
+                        <div class="project-content">
+                            <h4>Begapanku</h4>
+                            <p>
+                                  Cubo interactivo con pantallas táctiles, LEDs y Raspberry Pi para resolver acertijos visuales. 
+                                    Diseñado en AutoCAD, SketchUp y Figma como herramienta cognitiva para adolescentes.
+                            </p>
+                            <div class="project-actions">
+                            <a class="btn-xs primary" href="https://docs.google.com/presentation/d/111Toyag6G2Ynvku2mBkqE5EIeJBR_U-SOjE4qAdgZ08/edit?usp=sharing" target="_blank">Ver presentación</a>
+                            <a class="btn-xs" href="./begapanku/begapanku.pdf" target="_blank" rel="noopener noreferrer">Ver Docs</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SKETCHUP NUEVO TRANSFE -->
+                    <div class="project-item">
+                        <div class="project-cover">
+                            <img src="./nuevoquaranta/cover.jpg" alt="Cover Sketchup Nuevo Transfe">
+                        </div>
+                        <div class="project-content">
+                            <h4>Sketchup Nuevo Transfe</h4>
+                            <p>
+                                Modelado 3D arquitectónico en <strong>SketchUp</strong> para visualización de espacios y planificación de 
+                                transformaciones estructurales, incorporando materiales, sombras y renders fotorrealistas.
+                            </p>
+                            <div class="project-actions">
+                                <a href="./nuevoquaranta/index.html" target="_blank" rel="noopener noreferrer" class="btn-xs primary">
+                                    Ver docs
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Tobías Tarnowski — Creado con tereré y paciencia.</p>
+        </div>
+    </footer>
+</body>
+</html>

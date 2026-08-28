@@ -1,0 +1,8 @@
+node_modules/
+.next/
+.edge-headless*/
+out/
+.vercel/
+*.tsbuildinfo
+npm-debug.log*
+.DS_Store

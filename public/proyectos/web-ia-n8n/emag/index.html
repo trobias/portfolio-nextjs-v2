@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EMAG — Bot de Pedidos por WhatsApp</title>
+  <link rel="stylesheet" href="../../../styles.css" />
+</head>
+
+<body>
+  <header class="sub-header">
+    <div class="container">
+      <a href="../index.html" class="btn-xs back">← Volver</a>
+      <h2>EMAG — Bot de Pedidos por WhatsApp</h2>
+      <p class="subtitle">Automatización de pedidos mayoristas (refrigerantes y agua destilada) directamente en WhatsApp</p>
+    </div>
+  </header>
+
+  <main class="container project-demo">
+
+    <!-- Descripción -->
+    <section class="project-intro">
+      <h3>Descripción del proyecto</h3>
+      <p>
+        <strong>EMAG</strong> es un bot que traslada la lógica de un <strong>carrito de e-commerce</strong> al chat de WhatsApp.
+        Los clientes eligen productos desde un catálogo, editan cantidades, eliminan ítems, vacían el carrito y confirman
+        con su dirección o <em>coordenadas GPS</em>. Al finalizar, se deriva a un <strong>humano/distribuidor</strong> para cerrar el pedido.
+      </p>
+      <p>
+        El flujo está orquestado con <strong>n8n</strong>, persiste el borrador de carrito en <strong>Postgres</strong> por <code>chat_id</code> y usa
+        <strong>Evolution API</strong> como gateway de WhatsApp. Se empaqueta con <strong>Docker Compose</strong>. El 90% de la lógica es
+        determinística (JS + SQL) y el uso de LLM es opcional (router de intenciones).
+      </p>
+      <p>
+        Además, el proyecto integra <strong>Mercado Pago</strong> para generar automáticamente enlaces de cobro, 
+        registrar los estados de pago (pendiente, aprobado, rechazado) y confirmar el pedido una vez acreditado. 
+        Esta integración permite automatizar el flujo de venta de punta a punta, desde el pedido en WhatsApp hasta el pago online.
+      </p>
+    </section>
+
+    <!-- Funcionamiento breve -->
+    <section class="project-features">
+      <h3>Funcionamiento resumido</h3>
+      <ul class="feature-list">
+        <li>Catálogo interactivo (List Messages) para seleccionar productos.</li>
+        <li>Control completo del carrito: agregar, editar cantidades, eliminar, vaciar y reiniciar.</li>
+        <li>Confirmación obligatoria de dirección (texto o GPS) y derivación a humano.</li>
+        <li>Persistencia por <code>chat_id</code>: el borrador del pedido se conserva si el cliente corta la conversación.</li>
+        <li><strong>Mercado Pago:</strong> generación automática de links de pago, actualización del estado y notificación en tiempo real.</li>
+      </ul>
+    </section>
+
+    <!-- Tecnologías -->
+    <section class="project-details">
+      <h3>Tecnologías</h3>
+      <div class="kv">
+        <div><strong>Orquestación:</strong></div><div>Docker Compose</div>
+        <div><strong>Automatización:</strong></div><div>n8n (nodos Code en JS)</div>
+        <div><strong>Mensajería:</strong></div><div>Evolution API (WhatsApp)</div>
+        <div><strong>Base de datos:</strong></div><div>Postgres 16</div>
+        <div><strong>Pagos:</strong></div><div>Mercado Pago (API de preferencias / enlaces de cobro)</div>
+        <div><strong>IA (opcional):</strong></div><div>Router de intenciones (Gemini / OpenAI)</div>
+      </div>
+    </section>
+
+    <!-- Galería -->
+    <section class="project-gallery">
+      <h3>Galería de imágenes</h3>
+      <div class="image-grid">
+        <img src="./workflow-n8n.jpg" alt="Workflow completo en n8n">
+        <img src="./postgres.jpg" alt="Postgres">
+        <img src="./whatsapp-bienvenida.jpg" alt="Pantalla de bienvenida en WhatsApp">
+        <img src="./whatsapp-catalogo.jpg" alt="Selección de productos con lista interactiva">
+        <img src="./whatsapp-carrito.jpg" alt="Resumen del carrito con subtotales">
+        <img src="./crud-carrito.jpg" alt="Resumen del carrito con subtotales">
+        <img src="./whatsapp-direccion.jpg" alt="Confirmación con dirección o GPS">
+        <img src="./mercadopago-link.jpg" alt="Link de pago de Mercado Pago generado">
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Tobías Tarnowski — Proyecto EMAG</p>
+    </div>
+  </footer>
+</body>
+</html>  

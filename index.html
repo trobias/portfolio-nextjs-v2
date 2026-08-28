@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tobías Tarnowski | Automatización, IA y Soporte Técnico</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Portafolio de Tobías Tarnowski — Técnico Informático e Ingeniero en Sistemas en formación. Automatización con n8n, Inteligencia Artificial, soporte técnico, redes y proyectos de hardware." />
+  <link rel="canonical" href="https://tobias.vercel.app" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Tobías Tarnowski | Automatización, IA y Soporte Técnico" />
+  <meta property="og:description" content="Conecto servicios, automatizo procesos y creo soluciones inteligentes. Mirá mis proyectos en IA, redes y soporte técnico." />
+  <meta property="og:image" content="https://tobias.vercel.app/images/preview.png" />
+  <meta property="og:url" content="https://tobias.vercel.app" />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* --- ajustes visuales específicos --- */
+    .hero-image img {
+      width: 280px;
+      height: auto;
+      border-radius: 14px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    /* sobre mí y contacto más prolijos */
+    .about p,
+    .contact p,
+    .contact ul {
+      color: #475569;
+      line-height: 1.7;
+      max-width: 750px;
+      margin: 0 auto 1.2rem;
+      font-weight: 400;
+    }
+
+    .about strong {
+      font-weight: 600;
+      color: #1e293b;
+    }
+
+    .about em {
+      color: #334155;
+    }
+
+    .contact ul {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+    }
+
+    .contact li {
+      margin-bottom: 6px;
+    }
+
+    .contact a {
+      color: #0f172a;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    h3 {
+      margin-bottom: 0.75rem;
+    }
+
+    section.about,
+    section.contact {
+      text-align: center;
+      padding: 40px 0;
+    }
+
+    /* ajustes nuevos para listas de habilidades */
+    #habilidades, #capacidades {
+      padding: 40px 0;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    #habilidades ul, #capacidades ul {
+      color: #475569;
+      line-height: 1.7;
+      font-size: 15px;
+      max-width: 800px;
+      margin: 0 auto;
+      padding-left: 20px;
+    }
+
+    #habilidades li, #capacidades li {
+      margin-bottom: 6px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <h1 class="logo">TOBÍAS TARNOWSKI</h1>
+        <nav aria-label="Principal">
+          <a href="#proyectos">Proyectos</a>
+          <a href="#habilidades">Habilidades</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h2>Este es mi portafolio: un resumen de lo que hago en internet.</h2>
+            <p>Me enfoco en resolver. Conecto servicios, armo flujos de IA, configuro redes, juego con adobe y sketchup y prototipo con Arduino. Si hace falta, desarrollo la web mínima para mostrar el resultado.</p>
+            <div class="buttons">
+              <a href="https://www.linkedin.com/in/tob%C3%ADas-tarnowski-076a3a270/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Ver LinkedIn</a>
+              <a href="https://github.com/trobias" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Ver GitHub</a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img src="images/arduino.jpeg" alt="Tobías Tarnowski" width="280" height="auto" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="projects" aria-labelledby="titulo-proyectos">
+      <div class="container">
+        <h3 id="titulo-proyectos">Proyectos</h3>
+        <p class="projects-subtitle">Mis proyectos y trabajos agrupados por categoría</p>
+
+        <div class="project-categories">
+          <a href="proyectos/web-ia-n8n/index.html" class="category-card">
+            <div class="category-header"><span class="category-icon">●●●</span></div>
+            <h4>WEB, IA y n8n</h4>
+            <p>Automatizaciones, chatbots y flujos inteligentes</p>
+          </a>
+
+          <a href="proyectos/redes-infra/index.html" class="category-card">
+            <div class="category-header"><span class="category-icon">●●●</span></div>
+            <h4>Redes & Infra</h4>
+            <p>Topologías, configuraciones y comunicaciones</p>
+          </a>
+
+          <a href="proyectos/adobes-3d/index.html" class="category-card">
+            <div class="category-header"><span class="category-icon">●●●</span></div>
+            <h4>Adobes y 3D</h4>
+            <p>Modelado, renders y producción audiovisual</p>
+          </a>
+
+          <a href="proyectos/arduino-iot/index.html" class="category-card">
+            <div class="category-header"><span class="category-icon">●●●</span></div>
+            <h4>Arduino & IoT / Makers</h4>
+            <p>Prototipos físicos y simulaciones</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- HABILIDADES -->
+    <section id="habilidades" class="skills">
+      <div class="container">
+        <h3>Habilidades</h3>
+        <p class="projects-subtitle">Herramientas y tecnologías que manejo</p>
+        <ul>
+          <li>n8n, APIs (Google Workspace, WhatsApp/Evolution API, Mercado Pago, LinkedIn/RapidAPI, OpenAI/Gemini)</li>
+          <li>Python (Pandas, RAG con LangChain, Cohere, FAISS)</li>
+          <li>SQL (PostgreSQL, MySQL) y modelado de datos</li>
+          <li>Docker, Docker Compose, Traefik, Redis, VPS</li>
+          <li>HTML, CSS, JavaScript; PHP básico para CRUDs</li>
+          <li>Vercel (deploy estático y SEO técnico)</li>
+          <li>GNS3, Mikrotik, Ubiquiti (redes y enlaces inalámbricos)</li>
+          <li>Pentesting y seguridad (documentación, pruebas e informes)</li>
+          <li>Arduino y Raspberry Pi (sensores, relés, prototipos)</li>
+          <li>SketchUp, AutoCAD, Figma; Adobe Photoshop/Illustrator/Premiere/After Effects</li>
+          <li>Git y GitHub (branches, PRs, versionado)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- LO QUE SÉ HACER -->
+    <section id="capacidades" class="usecases">
+      <div class="container">
+        <h3>Lo que sé hacer</h3>
+        <p class="projects-subtitle">Resultados prácticos que entrego</p>
+<ul>
+  <li>
+    Chatbots de WhatsApp (voz, carrito y Workspace): leen audios y mensajes, responden pedidos,
+    gestionan catálogos con CRUD + ubicación/GPS + link de pago (Mercado Pago), y ejecutan
+    acciones en Gmail, Calendar, Drive y Tasks. Desarrollados con <strong>n8n</strong> e
+    <strong>IA integrada</strong> para interpretar intención y mantener conversaciones naturales.
+  </li>
+  <li>Cobros automáticos: calcula totales e integra pagos con Mercado Pago → sin errores.</li>
+  <li>Reservas inteligentes: agenda y recuerda citas → menos ausencias.</li>
+  <li>Lectura de facturas (OCR): convierte fotos en datos → sin tipeo.</li>
+  <li>Stock controlado: alerta de bajo inventario → sin faltantes.</li>
+  <li>Leads automáticos: extrae contactos de Maps o LinkedIn → más prospectos.</li>
+  <li>Correo automatizado: clasifica y responde emails → bandeja limpia.</li>
+  <li>Archivos ordenados: guarda adjuntos en Drive → todo en su lugar.</li>
+  <li>Docs automáticos: presupuestos y contratos con plantillas → en segundos.</li>
+  <li>Reuniones resumidas: transcribe y resume → tareas al instante.</li>
+  <li>Reporte diario: ventas y métricas por chat/email → decisiones rápidas.</li>
+  <li>Encuestas postventa: pide valoración → más reseñas.</li>
+  <li>Filtro de CVs: analiza postulaciones con IA → mejor selección.</li>
+  <li>Alertas técnicas: detecta fallas y notifica → aviso inmediato.</li>
+  <li>Backups diarios: copias automáticas → cero pérdida.</li>
+
+  <!-- OTROS PROYECTOS -->
+  <li>Asistente IA para RR.HH.: RAG en tiempo real con datos de LinkedIn (Cohere + FAISS + LangChain).</li>
+  <li>Landing pages y portfolios livianos: HTML/CSS/JS con deploy en Vercel y SEO básico.</li>
+  <li>CRUD web con PHP + MySQL (Animabed) y organización de código para demos locales.</li>
+  <li>Topologías de red con GNS3 (routers, switches, OSPF/EIGRP/VLANs) y pruebas de conectividad.</li>
+  <li>Enlaces inalámbricos Ubiquiti/Mikrotik: PTP/PTMP, alineación, medición y optimización.</li>
+  <li>Pentesting y ciberseguridad (Hackobo): planificación, ejecución y reportes.</li>
+  <li>Prototipos con Arduino/Raspberry Pi: control de temperatura (horno), simuladores y sensores.</li>
+  <li>Diseño 3D y visual: SketchUp/AutoCAD/Blender; piezas y escenas para presentaciones.</li>
+  <li>Documentación técnica clara: PDFs, diagramas de flujo y entregables profesionales.</li>
+</ul>
+
+      </div>
+    </section>
+
+    <!-- SOBRE MÍ -->
+    <section id="sobre-mi" class="about" aria-labelledby="titulo-sobre-mi">
+      <div class="container">
+        <h3 id="titulo-sobre-mi">Sobre mí</h3>
+        <p>
+          Soy estudiante de <strong>Ingeniería en Sistemas de Información</strong> en la Universidad de la Cuenca del Plata y técnico informático egresado de la E.P.E.T. N°1.  
+          Me apasiona la automatización de procesos, el soporte técnico y la inteligencia artificial.
+        </p>
+        <p>
+          Actualmente desarrollo proyectos con n8n, Python y SQL, integrando herramientas como Google Workspace y APIs para crear soluciones prácticas para PYMEs.  
+          También tengo experiencia en mantenimiento de hardware, redes y optimización de entornos informáticos.
+        </p>
+        <p>
+          Mi enfoque es simple: resolver problemas de manera eficiente, automatizar lo repetitivo y ayudar a las personas a trabajar mejor con tecnología.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="contact" aria-labelledby="titulo-contacto">
+      <div class="container">
+        <h3 id="titulo-contacto">Contacto</h3>
+        <p>¿Querés hablar sobre un proyecto o colaboración?</p>
+        <ul>
+          <li>Email: <a href="mailto:tobias.44276@gmail.com">tobias.44276@gmail.com</a></li>
+          <li>Teléfono: <a href="https://wa.me/5493764260055">+54 9 376 426 0055</a></li>
+          <li>Ubicación: Posadas, Misiones, Argentina</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Tobías Tarnowski — Automatización, Soporte y Soluciones con IA.</p>
+    </div>
+  </footer>
+</body>
+</html>

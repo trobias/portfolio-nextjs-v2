@@ -3,7 +3,7 @@
 Portfolio editorial construido con Next.js, React, TypeScript y Motion. Presenta 28 casos entre automatización, IA, software, comercio, redes, infraestructura y hardware.
 
 - Repositorio: `https://github.com/trobias/portfolio-nextjs-v2`
-- Producción: `https://portfolio-nextjs-v2.vercel.app`
+- Producción: `https://portfolio-nextjs-v2-ashen.vercel.app`
 
 ## Inicio rápido
 

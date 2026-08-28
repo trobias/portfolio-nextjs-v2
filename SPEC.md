@@ -232,7 +232,7 @@ El backlog ejecutable está en `tasks/todo.md`; el orden y rollback están en `t
 1. ¿Autoriza fijar TypeScript 6.x para recuperar ESLint?
 2. ¿Qué capturas y módulos de ERP Mamayucca, Bot Mamayucca, Facturación, Misiones Muebles, Nico Scraper, Ceferina, Zuzaniuk y BarberAdmin pueden publicarse?
 3. ¿Cuál es la URL vigente de ZUBU Rentals?
-4. ¿Se mantendrá el alias `portfolio-nextjs-v2.vercel.app` o se configurará un dominio personalizado más adelante?
+4. ¿Se mantendrá el alias `portfolio-nextjs-v2-ashen.vercel.app` o se configurará un dominio personalizado más adelante?
 
 ## 16. Rollback
 

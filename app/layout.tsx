@@ -18,7 +18,7 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://portfolio-nextjs-v2.vercel.app"),
+  metadataBase: new URL("https://portfolio-nextjs-v2-ashen.vercel.app"),
   title: {
     default: "Tobías Tarnowski — Sistemas, automatización e IA",
     template: "%s — Tobías Tarnowski",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Tobías Tarnowski — Conecto. Automatizo. Resuelvo.",
     description: "Sistemas que conectan IA, automatización, redes y hardware para resolver trabajo real.",
-    url: "https://portfolio-nextjs-v2.vercel.app",
+    url: "https://portfolio-nextjs-v2-ashen.vercel.app",
     siteName: "Tobías Tarnowski",
     locale: "es_AR",
     type: "website",

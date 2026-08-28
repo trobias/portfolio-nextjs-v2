@@ -4,6 +4,8 @@
 
 Fecha de revisión: 28 de agosto de 2026.
 
+Producción: `https://portfolio-nextjs-v2-ashen.vercel.app`, proyecto Vercel independiente `portfolio-nextjs-v2`.
+
 ## Resultado técnico
 
 | Control | Resultado | Evidencia |

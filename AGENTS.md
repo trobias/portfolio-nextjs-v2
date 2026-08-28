@@ -60,6 +60,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 - Use pinned dependency versions and ask before installing or changing them.
 - Do not deploy, push, delete legacy material or expose a private system without explicit authorization.
+- The user has granted standing authorization for this repository to commit each verified functional change separately, write commit messages in Spanish and push it to `main`; do not batch unrelated work into one commit.
 - Keep `AGENTS.md` and `CLAUDE.md` aligned; `CLAUDE.md` imports this file.
 
 ## New-agent handoff

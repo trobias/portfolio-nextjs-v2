@@ -8,4 +8,6 @@ The project archive is intentionally organized by the four `group` values define
 
 Primary pill CTAs use `AnimatedPillLink`; do not replace its directional fill sweep with a generic background-color hover.
 
+Commit every verified functional change separately with a Spanish commit message and push it to `main`; this repository has standing user authorization for that workflow.
+
 This is the independent Next.js repository `trobias/portfolio-nextjs-v2`, deployed by the separate Vercel project `portfolio-nextjs-v2` at `portfolio-nextjs-v2-ashen.vercel.app`; never push it to the legacy `trobias/PORTFOLIO` repository.

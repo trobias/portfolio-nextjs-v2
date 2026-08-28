@@ -2,8 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Announcement } from "@/components/announcement";
-import { AnimatedPillLink } from "@/components/animated-pill-link";
 import { ArrowIcon } from "@/components/arrow-icon";
+import { ContactMenu } from "@/components/contact-menu";
 import { Hero } from "@/components/hero";
 import { ProjectGrid } from "@/components/project-grid";
 import { SiteHeader } from "@/components/site-header";
@@ -75,14 +75,50 @@ export default function Home() {
             Automatización, infraestructura, interfaces y prototipos físicos construidos como sistemas completos.
           </p>
         </div>
-        <ProjectGrid projects={featuredProjects} />
+        <Link href="/proyectos" className="archiveTopLink">
+          <span>Ver todos los casos</span>
+          <small>{projects.length} proyectos · 3 categorías</small>
+          <ArrowIcon />
+        </Link>
+        <ProjectGrid projects={featuredProjects} compact />
         <Link href="/proyectos" className="archiveGateway">
-          <span className="archiveGatewayEyebrow">Archivo completo · 4 categorías</span>
+          <span className="archiveGatewayEyebrow">Archivo completo · 3 categorías</span>
           <strong>VER LOS<br />{projects.length} CASOS.</strong>
           <span className="archiveGatewayAction">
             Explorar índice <ArrowIcon />
           </span>
         </Link>
+      </section>
+
+      <section className="zubuFeature sectionPad" aria-labelledby="zubu-title">
+        <div className="zubuFeatureIntro">
+          <p>COFUNDADOR · 2026</p>
+          <h2 id="zubu-title">ZUBU<br />AGENCY.</h2>
+        </div>
+        <div className="zubuFeatureBody">
+          <p className="zubuFeatureLead">
+            No es un proyecto aislado. Es la agencia que cofundé para convertir procesos reales en software, automatizaciones,
+            bots, tiendas e integraciones que se puedan operar y hacer crecer.
+          </p>
+          <p>
+            Desde ZUBU trabajamos con comercio, servicios y operaciones internas. Ahí conviven relevamiento, dirección de
+            producto, implementación, despliegue y acompañamiento; desde una landing hasta un ERP conectado.
+          </p>
+          <div className="zubuWorks" aria-label="Trabajos vinculados a ZUBU Agency">
+            {[
+              ["Agro Gross", "/proyectos/agroveterinaria-gross"],
+              ["OrdenYa", "/proyectos/tienda-ordenya"],
+              ["Yeryos", "/proyectos/yeryos"],
+              ["Ceferina", "/proyectos/ceferina-accesorios"],
+              ["Mamayucca", "/proyectos/tienda-mamayucca"],
+            ].map(([label, href]) => <Link href={href} key={href}>{label}</Link>)}
+          </div>
+          <div className="zubuLinks">
+            <a href="https://zubuagency.com/" target="_blank" rel="noreferrer">Sitio <ArrowIcon /></a>
+            <a href="https://www.instagram.com/zubuagency/" target="_blank" rel="noreferrer">Instagram <ArrowIcon /></a>
+            <a href="https://wa.me/5493764502803" target="_blank" rel="noreferrer">WhatsApp <ArrowIcon /></a>
+          </div>
+        </div>
       </section>
 
       <section id="enfoque" className="processSection sectionPad" aria-labelledby="process-title">
@@ -131,13 +167,31 @@ export default function Home() {
         <div className="aboutCopy">
           <h2 id="about-title">TÉCNICO POR FORMACIÓN. CURIOSO POR DEPORTE.</h2>
           <p className="aboutLead">
-            Soy técnico informático y estudiante de Ingeniería en Sistemas de Información. Me gusta entender cómo se conectan las cosas y construir la pieza que falta.
+            Soy Analista de Sistemas de Información, Técnico Informático y estudiante de 4.º año de Ingeniería en Sistemas.
+            Cofundé ZUBU Agency en 2026 y trabajo de forma independiente en tecnología desde 2021.
           </p>
           <p>
             Trabajo con automatización, IA, desarrollo web, infraestructura y prototipado. Esa mezcla me permite moverme desde la conversación con una persona hasta la API, la base de datos o el dispositivo que hace que el proceso termine de verdad.
           </p>
+          <div className="educationList" aria-label="Formación">
+            <div>
+              <span>2023—2027</span>
+              <strong>Ingeniería en Sistemas de Información</strong>
+              <small>Universidad de la Cuenca del Plata · 4.º año en curso</small>
+            </div>
+            <div>
+              <span>2025</span>
+              <strong>Analista de Sistemas de Información</strong>
+              <small>Título universitario intermedio obtenido al finalizar 3.er año</small>
+            </div>
+            <div>
+              <span>2016—2021</span>
+              <strong>Técnico Informático</strong>
+              <small>E.P.E.T. N.º 1 · Posadas, Misiones</small>
+            </div>
+          </div>
           <div className="aboutLinks">
-            <a href="https://www.linkedin.com/in/tob%C3%ADas-tarnowski-076a3a270/" target="_blank" rel="noreferrer">
+            <a href="https://www.linkedin.com/in/tobiastarnowski/" target="_blank" rel="noreferrer">
               LinkedIn <ArrowIcon />
             </a>
             <a href="https://github.com/trobias" target="_blank" rel="noreferrer">
@@ -151,9 +205,7 @@ export default function Home() {
         <p className="contactIntro">¿Tenés un sistema por destrabar?</p>
         <h2 id="contact-title">HAGAMOS ALGO<br />QUE FUNCIONE.</h2>
         <div className="contactBottom">
-          <AnimatedPillLink className="contactButton" href="mailto:tobias.44276@gmail.com">
-            Escribime <ArrowIcon />
-          </AnimatedPillLink>
+          <ContactMenu />
           <div className="contactDetails">
             <a href="mailto:tobias.44276@gmail.com">tobias.44276@gmail.com</a>
             <a href="https://wa.me/5493764260055" target="_blank" rel="noreferrer">+54 9 376 426 0055</a>

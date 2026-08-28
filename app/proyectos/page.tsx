@@ -7,7 +7,7 @@ import { groupedProjects, projects } from "@/lib/projects";
 
 export const metadata: Metadata = {
   title: "Proyectos",
-  description: "Índice de proyectos de automatización, IA, redes, hardware y diseño de Tobías Tarnowski.",
+  description: "Índice de proyectos de comercio, software, automatización, IA, infraestructura y producto de Tobías Tarnowski.",
 };
 
 export default function ProjectsIndex() {
@@ -16,10 +16,6 @@ export default function ProjectsIndex() {
       <SiteHeader />
       <header className="indexHero sectionPad">
         <h1>TODO EL<br />TRABAJO.</h1>
-        <div className="indexIntro">
-          <p>{projects.length} casos entre sistemas, automatizaciones, redes, interfaces, comercio y prototipos.</p>
-          <Link href="/">← Volver al inicio</Link>
-        </div>
         <nav className="categoryIndex" aria-label="Categorías de proyectos">
           <span>Ir a una categoría</span>
           <ol>
@@ -34,6 +30,10 @@ export default function ProjectsIndex() {
             ))}
           </ol>
         </nav>
+        <div className="indexIntro">
+          <p>{projects.length} casos entre comercio, sistemas, ERP, bots, automatizaciones, infraestructura y prototipos.</p>
+          <Link href="/">← Volver al inicio</Link>
+        </div>
       </header>
       <div className="indexGrid sectionPad">
         {groupedProjects.map((group) => (

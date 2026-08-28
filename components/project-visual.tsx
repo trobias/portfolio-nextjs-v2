@@ -16,7 +16,8 @@ export function ProjectVisual({ project, sizes, priority = false, decorative = f
         src={project.cover}
         alt={decorative ? "" : project.coverAlt ?? `Vista de ${project.title}`}
         fill
-        priority={priority}
+        preload={priority}
+        unoptimized={project.cover.endsWith(".gif")}
         sizes={sizes}
         style={project.coverPosition ? { objectPosition: project.coverPosition } : undefined}
       />

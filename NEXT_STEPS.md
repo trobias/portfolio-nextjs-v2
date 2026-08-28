@@ -9,12 +9,12 @@
 3. **ESLint:** autorizar el cambio de TypeScript 7 a una versión 6.x compatible con `typescript-eslint`. Typecheck y build pasan; lint queda bloqueado por incompatibilidad de herramientas.
 4. **React Doctor:** autorizar su instalación local si querés agregar ese diagnóstico al gate; no existe un binario instalado y no se descargó tooling mutable sin permiso.
 
-## P1 — Antes de publicar
+## P1 — Mejoras posteriores a la publicación
 
 1. Revalidar todos los enlaces públicos y revisar que ninguna demo haya agregado login.
 2. Reemplazar portadas editoriales por capturas reales sólo cuando exista autorización.
 3. Open Graph y Twitter card creados estáticamente con diseño editorial (`/opengraph-image`, `/twitter-image`).
-4. Ejecutar Lighthouse en producción para LCP, CLS, INP, accesibilidad y SEO.
+4. Ejecutar Lighthouse sobre `https://portfolio-nextjs-v2-ashen.vercel.app` para LCP, CLS, INP, accesibilidad y SEO.
 5. Probar teclado, 200% de zoom y `prefers-reduced-motion` en Chrome/Edge y Firefox.
 6. Decidir si los archivos estáticos legacy de la raíz (`index.html`, `styles.css`) se archivan o eliminan; se conservaron para no borrar trabajo sin aprobación.
 

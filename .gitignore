@@ -6,3 +6,6 @@ out/
 *.tsbuildinfo
 npm-debug.log*
 .DS_Store
+
+.vercel
+.env*

@@ -13,10 +13,10 @@ Cada tarea cabe en una sesión enfocada y debe actualizar la documentación rela
 
 ## Pendiente, bloqueado por decisión o material
 
-- [ ] Confirmar dominio final y actualizar metadata, sitemap y robots.
-  - Acceptance: las tres superficies usan el mismo dominio de producción y `npm run build` pasa.
-  - Verify: inspeccionar `/robots.txt`, `/sitemap.xml` y metadata de `/`.
-  - Files: `app/layout.tsx`, `app/sitemap.ts`, `app/robots.ts`, `NEXT_STEPS.md`.
+- [x] Confirmar dominio de producción y actualizar metadata, sitemap y robots.
+  - Acceptance: las tres superficies usan `portfolio-nextjs-v2-ashen.vercel.app` y el build de Vercel pasa.
+  - Verify: `/robots.txt`, `/sitemap.xml`, metadata y rutas principales responden HTTP 200.
+  - Files: `app/layout.tsx`, `app/sitemap.ts`, `app/robots.ts`, `VERIFICATION.md`.
 
 - [ ] Autorizar y aplicar una versión TypeScript compatible con ESLint.
   - Acceptance: `npm run lint`, `npm run typecheck` y `npm run build` terminan con código 0.
@@ -60,7 +60,7 @@ Cada tarea cabe en una sesión enfocada y debe actualizar la documentación rela
   - Verify: adjuntar o resumir el reporte en `VERIFICATION.md`.
   - Files: `VERIFICATION.md`.
 
-- [ ] Revisar y autorizar deploy.
-  - Acceptance: Tobías aprueba dominio, contenido privado publicado y destino de hosting.
-  - Verify: revisión humana final; el agente no despliega por inferencia.
-  - Files: documentación de deploy que se cree en ese momento.
+- [x] Crear repositorio y deployment independientes.
+  - Acceptance: `trobias/portfolio-nextjs-v2` está conectado al proyecto Vercel `portfolio-nextjs-v2` sin reemplazar `trobias/PORTFOLIO`.
+  - Verify: deployment `Ready`, build de 36 páginas y seis rutas HTTP 200.
+  - Files: `README.md`, `AGENTS.md`, `CLAUDE.md`, `VERIFICATION.md`.

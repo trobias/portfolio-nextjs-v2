@@ -19,6 +19,15 @@ Producción: `https://portfolio-nextjs-v2-ashen.vercel.app`, proyecto Vercel ind
 | ESLint | Bloqueado por toolchain | `typescript-eslint` todavía no soporta TypeScript 7.0; requiere autorización para fijar TypeScript 6.x |
 | React Doctor | No ejecutado | No está instalado localmente; instalarlo o ejecutarlo con descarga requiere autorización |
 
+## Producción y Git
+
+- Repositorio público: `https://github.com/trobias/portfolio-nextjs-v2`, rama `main`.
+- Proyecto Vercel: `portfolio-nextjs-v2`, conectado al repositorio para futuros despliegues desde Git.
+- El primer deployment respondió 404 porque Vercel había creado el proyecto con preset `Other` y salida `public/`; se corrigió a `Next.js` con build, instalación y output en autodetección.
+- El deployment final quedó `Ready` después de compilar TypeScript y generar 36 páginas.
+- Portada, `/proyectos`, una ficha individual, `/robots.txt`, `/sitemap.xml` y `/opengraph-image` responden HTTP 200 en producción.
+- La copia independiente no tiene dependencias instaladas localmente; el gate definitivo se ejecutó en el entorno limpio de Vercel mediante `npm install` y `npm run build`.
+
 ## Revisión visual
 
 - Portada a 1440 × 900: jerarquía, capas del hero, navegación, CTA y animación asentada.

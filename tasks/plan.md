@@ -6,7 +6,7 @@ Fuente: `SPEC.md`. Este plan parte de una baseline ya implementada y no autoriza
 
 ```text
 A. Decisiones de Tobías
-   ├─ A1 dominio final ─────────────> B1 metadata/SEO
+   ├─ A1 dominio final [resuelto] ──> B1 metadata/SEO [completado]
    ├─ A2 autorización de tooling ───> B2 compatibilidad ESLint
    ├─ A3 evidencia privada ─────────> B3 completar casos privados
    └─ A4 URL Rentals ───────────────> B4 revalidar y capturar
@@ -19,7 +19,7 @@ B1 + B2 + B3 + B4
 
 ## Fase 1: desbloqueos
 
-1. Obtener dominio final, decisiones de publicación y material autorizado.
+1. Dominio y publicación resueltos con el repositorio y proyecto Vercel independientes; conservar el alias documentado hasta aprobar un dominio personalizado.
 2. Resolver si TypeScript puede fijarse en 6.x; si no, conservar el bloqueo documentado.
 3. Obtener una URL vigente para Rentals o mantener su caso como documentación interna.
 

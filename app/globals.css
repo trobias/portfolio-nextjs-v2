@@ -336,8 +336,15 @@ summary:focus-visible {
   inset: 0;
   justify-content: flex-end;
   padding: calc(var(--header-height) + 2rem) var(--page-pad) clamp(2rem, 4vw, 4rem);
+  pointer-events: none;
   position: absolute;
   z-index: 2;
+}
+
+.heroContent a,
+.heroContent button,
+.heroCta {
+  pointer-events: auto;
 }
 
 .heroTitle {

@@ -53,10 +53,10 @@ export function Hero() {
       <div className="heroCanvasWrap" aria-hidden="true">
         <ConstellationGrid
           embedded
-          accentColor="255, 90, 54"
+          accentColor="56, 189, 248"
           nodeColor="255, 255, 255"
-          opacity={0.88}
-          spacing={58}
+          opacity={0.95}
+          spacing={52}
         />
       </div>
 

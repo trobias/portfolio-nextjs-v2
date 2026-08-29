@@ -16,7 +16,7 @@ interface Node {
 
 export interface ConstellationGridProps {
     className?: string;
-    accentColor?: string; // e.g. '255, 90, 54' (Signal Orange)
+    accentColor?: string; // e.g. '56, 189, 248' (Sky Cyan / Blue)
     nodeColor?: string; // e.g. '255, 255, 255'
     bgColor?: string;
     overlayText?: boolean;
@@ -26,35 +26,16 @@ export interface ConstellationGridProps {
     customLabels?: string[];
 }
 
-const DEFAULT_STACK_LABELS = [
-    'N8N:WEBHOOK',
-    'ARDUINO:I2C',
-    'DOCKER:UP',
-    'PG:5432',
-    'OPENAI:EMBED',
-    'GEMINI:PROMPT',
-    'PIN:13_HIGH',
-    'SYS:RUNNING',
-    'GNS3:VLAN10',
-    'REST:200_OK',
-    'MQTT:PUB',
-    'LAT:27.36S',
-    'NODE:ONLINE',
-    'FLOW:SYNC',
-    'SENSOR:TMP36',
-    'ADC:1024',
-];
-
 export default function ConstellationGrid({
     className = '',
-    accentColor = '255, 90, 54', // Signal orange default (#ff5a36)
+    accentColor = '56, 189, 248', // Electric Sky Cyan / Blue
     nodeColor = '255, 255, 255',
     bgColor,
     overlayText = false,
     embedded = false,
     opacity = 1,
-    spacing = 55,
-    customLabels = DEFAULT_STACK_LABELS,
+    spacing = 52,
+    customLabels,
 }: ConstellationGridProps) {
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
     const containerRef = useRef<HTMLDivElement | null>(null);
@@ -71,11 +52,7 @@ export default function ConstellationGrid({
 
     useEffect(() => {
         const canvas = canvasRef.current;
-        const container = containerRef.current || canvas?.parentElement;
         if (!canvas) return;
-
-        // Check for reduced motion preference
-        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
         const ctx = canvas.getContext('2d', { alpha: true });
         if (!ctx) return;
@@ -92,17 +69,17 @@ export default function ConstellationGrid({
             prevY: -1000,
             vx: 0,
             vy: 0,
-            radius: 220,
+            radius: 240,
         };
 
         let nodes: Node[] = [];
 
         const handleResize = () => {
             const dpr = Math.min(window.devicePixelRatio || 1, 2);
-            if (embedded && container) {
-                const rect = container.getBoundingClientRect();
-                width = rect.width;
-                height = rect.height;
+            if (embedded && containerRef.current) {
+                const rect = containerRef.current.getBoundingClientRect();
+                width = rect.width || window.innerWidth;
+                height = rect.height || window.innerHeight;
             } else {
                 width = window.innerWidth;
                 height = window.innerHeight;
@@ -119,13 +96,25 @@ export default function ConstellationGrid({
         };
 
         const handleMouseMove = (e: MouseEvent) => {
-            if (embedded && container) {
-                const rect = container.getBoundingClientRect();
-                mouse.x = e.clientX - rect.left;
-                mouse.y = e.clientY - rect.top;
+            const rect = canvas.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            if (x >= -80 && x <= width + 80 && y >= -80 && y <= height + 80) {
+                mouse.x = x;
+                mouse.y = y;
             } else {
-                mouse.x = e.clientX;
-                mouse.y = e.clientY;
+                mouse.x = -1000;
+                mouse.y = -1000;
+            }
+        };
+
+        const handleTouchMove = (e: TouchEvent) => {
+            if (e.touches.length > 0) {
+                const touch = e.touches[0];
+                const rect = canvas.getBoundingClientRect();
+                mouse.x = touch.clientX - rect.left;
+                mouse.y = touch.clientY - rect.top;
             }
         };
 
@@ -158,7 +147,7 @@ export default function ConstellationGrid({
                         vy: 0,
                         baseX: x,
                         baseY: y,
-                        radius: Math.random() * 1.1 + 1.1,
+                        radius: Math.random() * 1.3 + 1.2,
                         label: assignedLabel,
                         pulse: Math.random() * Math.PI * 2,
                     });
@@ -168,11 +157,10 @@ export default function ConstellationGrid({
 
         handleResize();
         window.addEventListener('resize', handleResize);
-
-        // Attach mouse listeners to window or container
-        const targetElement = embedded && container ? container : window;
-        targetElement.addEventListener('mousemove', handleMouseMove as EventListener);
-        targetElement.addEventListener('mouseleave', handleMouseLeave as EventListener);
+        window.addEventListener('mousemove', handleMouseMove);
+        window.addEventListener('mouseleave', handleMouseLeave);
+        window.addEventListener('touchmove', handleTouchMove, { passive: true });
+        window.addEventListener('touchstart', handleTouchMove, { passive: true });
 
         let lastTime = performance.now();
 
@@ -194,24 +182,11 @@ export default function ConstellationGrid({
                 ctx.fillStyle = bgColor;
                 ctx.fillRect(0, 0, width, height);
             } else if (!embedded) {
-                const defaultBg = isDarkMode ? '#0b0b0b' : '#f8fafc';
+                const defaultBg = isDarkMode ? '#030407' : '#f8fafc';
                 ctx.fillStyle = defaultBg;
                 ctx.fillRect(0, 0, width, height);
             } else {
                 ctx.clearRect(0, 0, width, height);
-            }
-
-            // If user prefers reduced motion, draw calm static node mesh without spring shockwaves
-            if (prefersReducedMotion) {
-                const effectiveNodeColor = nodeColor;
-                for (let i = 0; i < nodes.length; i++) {
-                    const n = nodes[i];
-                    ctx.fillStyle = `rgba(${effectiveNodeColor}, 0.25)`;
-                    ctx.beginPath();
-                    ctx.arc(n.baseX, n.baseY, n.radius, 0, Math.PI * 2);
-                    ctx.fill();
-                }
-                return;
             }
 
             // Node Physics Engine (Hooke's Law Spring-Mass-Damping system)
@@ -230,7 +205,7 @@ export default function ConstellationGrid({
                 // Dynamic shockwave repulsion based on cursor speed
                 if (dist < mouse.radius && dist > 0) {
                     const power = (1 - dist / mouse.radius);
-                    const force = power * (1500 + speed * 150);
+                    const force = power * (1600 + speed * 160);
                     const angle = Math.atan2(dy, dx);
 
                     // Impulse force pushing node away from cursor
@@ -269,10 +244,10 @@ export default function ConstellationGrid({
 
                     if (distSq < MAX_CONN_DIST_SQ) {
                         const nDist = Math.sqrt(distSq);
-                        const alpha = (1 - nDist / MAX_CONN_DIST) * (embedded ? 0.12 : (isDarkMode ? 0.18 : 0.08));
+                        const alpha = (1 - nDist / MAX_CONN_DIST) * (embedded ? 0.18 : (isDarkMode ? 0.22 : 0.1));
 
                         ctx.strokeStyle = `rgba(${nodeColor}, ${alpha})`;
-                        ctx.lineWidth = 0.7;
+                        ctx.lineWidth = 0.75;
                         ctx.beginPath();
                         ctx.moveTo(n.x, n.y);
                         ctx.lineTo(n2.x, n2.y);
@@ -290,34 +265,34 @@ export default function ConstellationGrid({
                 const isNear = dist < mouse.radius;
 
                 // Node base opacity pulse
-                const baseAlpha = isNear ? 0.95 : (embedded ? 0.22 : 0.25) + Math.sin(n.pulse) * 0.08;
+                const baseAlpha = isNear ? 0.98 : (embedded ? 0.25 : 0.28) + Math.sin(n.pulse) * 0.1;
 
                 ctx.fillStyle = isNear
                     ? `rgba(${accentColor}, ${baseAlpha})`
                     : `rgba(${nodeColor}, ${baseAlpha})`;
 
                 const currentRadius = isNear
-                    ? n.radius * 2.1
-                    : n.radius + Math.sin(n.pulse) * 0.25;
+                    ? n.radius * 2.3
+                    : n.radius + Math.sin(n.pulse) * 0.3;
 
                 ctx.beginPath();
                 ctx.arc(n.x, n.y, Math.max(0.5, currentRadius), 0, Math.PI * 2);
                 ctx.fill();
 
                 // High-tech Spatial Radar Rings on active proximity
-                if (dist < 90) {
+                if (dist < 95) {
                     const pulseRing = ((n.pulse * 20) % 30) + 4;
-                    const ringAlpha = (1 - pulseRing / 34) * 0.45;
+                    const ringAlpha = (1 - pulseRing / 34) * 0.55;
 
                     ctx.strokeStyle = `rgba(${accentColor}, ${ringAlpha})`;
-                    ctx.lineWidth = 1;
+                    ctx.lineWidth = 1.2;
                     ctx.beginPath();
                     ctx.arc(n.x, n.y, pulseRing, 0, Math.PI * 2);
                     ctx.stroke();
 
-                    // Hex / Telemetry Coordinate Readout
-                    ctx.font = '9px var(--font-mono), monospace, Consolas';
-                    ctx.fillStyle = `rgba(${accentColor}, 0.9)`;
+                    // Hex / Coordinate Readout in vibrant cyan/blue
+                    ctx.font = '9px var(--font-mono), ui-monospace, SFMono-Regular, Consolas, monospace';
+                    ctx.fillStyle = `rgba(${accentColor}, 0.95)`;
                     ctx.fillText(n.label, n.x + 10, n.y - 10);
                 }
             }
@@ -330,8 +305,10 @@ export default function ConstellationGrid({
         return () => {
             cancelAnimationFrame(animationFrameId);
             window.removeEventListener('resize', handleResize);
-            targetElement.removeEventListener('mousemove', handleMouseMove as EventListener);
-            targetElement.removeEventListener('mouseleave', handleMouseLeave as EventListener);
+            window.removeEventListener('mousemove', handleMouseMove);
+            window.removeEventListener('mouseleave', handleMouseLeave);
+            window.removeEventListener('touchmove', handleTouchMove);
+            window.removeEventListener('touchstart', handleTouchMove);
         };
     }, [isDarkMode, embedded, accentColor, nodeColor, bgColor, spacing, customLabels]);
 

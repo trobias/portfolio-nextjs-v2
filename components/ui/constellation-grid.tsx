@@ -28,8 +28,8 @@ export interface ConstellationGridProps {
 
 export default function ConstellationGrid({
     className = '',
-    accentColor = '56, 189, 248', // Electric Sky Cyan / Blue
-    nodeColor = '255, 255, 255',
+    accentColor = '255, 90, 54', // Signal Orange (#ff5a36)
+    nodeColor = '255, 255, 255',  // Pure White (#ffffff)
     bgColor,
     overlayText = false,
     embedded = false,

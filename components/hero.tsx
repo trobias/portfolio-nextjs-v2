@@ -6,6 +6,7 @@ import { useRef } from "react";
 
 import { AnimatedPillLink } from "@/components/animated-pill-link";
 import { ArrowIcon } from "@/components/arrow-icon";
+import ConstellationGrid from "@/components/ui/constellation-grid";
 
 const lineTransition = {
   duration: 0.9,
@@ -48,6 +49,16 @@ export function Hero() {
         />
       </motion.div>
       <div className="heroScrim" aria-hidden="true" />
+
+      <div className="heroCanvasWrap" aria-hidden="true">
+        <ConstellationGrid
+          embedded
+          accentColor="255, 90, 54"
+          nodeColor="255, 255, 255"
+          opacity={0.88}
+          spacing={58}
+        />
+      </div>
 
       <div className="heroContent">
         <h1 id="hero-title" className="heroTitle" aria-label="Conecto. Automatizo. Resuelvo.">

@@ -202,6 +202,38 @@ summary:focus-visible {
   width: 100%;
 }
 
+.headerTelemetry {
+  align-items: center;
+  display: flex;
+  gap: 0.6rem;
+  grid-column: 3;
+  justify-content: flex-end;
+  padding-top: 0.35rem;
+}
+
+.telemetryPulse {
+  background: var(--orange);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--orange);
+  display: inline-block;
+  height: 6px;
+  width: 6px;
+  animation: telemetryBlink 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes telemetryBlink {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.35; transform: scale(0.85); }
+}
+
+.telemetryText {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  opacity: 0.85;
+}
+
 .mobileNav {
   display: none;
 }
@@ -235,6 +267,67 @@ summary:focus-visible {
   inset: 0;
   position: absolute;
   z-index: 1;
+}
+
+.heroCanvasWrap {
+  inset: 0;
+  pointer-events: auto;
+  position: absolute;
+  z-index: 1;
+}
+
+.constellationGrid {
+  position: relative;
+  width: 100%;
+}
+
+.constellationEmbedded {
+  height: 100%;
+  inset: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.constellationCanvas {
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.constellationOverlay {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  mix-blend-mode: difference;
+  padding: 1rem;
+  pointer-events: none;
+  position: relative;
+  text-align: center;
+  z-index: 10;
+}
+
+.constellationTitle {
+  color: #fff;
+  font-family: var(--font-mono), monospace;
+  font-size: clamp(3rem, 10vw, 7rem);
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.constellationDescription {
+  color: #fff;
+  font-family: var(--font-mono), monospace;
+  font-size: clamp(0.75rem, 1.2vw, 0.88rem);
+  margin-top: 1rem;
+  max-width: 32rem;
+  opacity: 0.7;
 }
 
 .heroContent {
@@ -1589,6 +1682,7 @@ summary:focus-visible {
   :root { --header-height: 5.5rem; }
 
   .desktopNav { display: none; }
+  .headerTelemetry { display: none; }
   .siteHeader { grid-template-columns: 1fr auto; }
 
   .mobileNav {

@@ -18,6 +18,11 @@ export function SiteHeader({ inverted = false }: SiteHeaderProps) {
         <Link href="/#contacto">Contacto</Link>
       </nav>
 
+      <div className="headerTelemetry" aria-label="Estado operativo">
+        <span className="telemetryPulse" aria-hidden="true" />
+        <span className="telemetryText">POSADAS, AR · SISTEMAS ONLINE</span>
+      </div>
+
       <details className="mobileNav">
         <summary>Menú</summary>
         <nav aria-label="Navegación móvil">

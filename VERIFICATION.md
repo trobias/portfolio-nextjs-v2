@@ -113,6 +113,16 @@ Verificación local del 28 de agosto de 2026:
 - `npm run build`: pasa y prerenderiza `/icon.png` dentro de 36 rutas estáticas.
 - `npm run lint`: bloqueado antes de analizar archivos porque el `typescript-eslint` incluido declara que no soporta TypeScript 7.0.2. No se cambiaron dependencias.
 
+## Ajuste de luminosidad del hero
+
+Verificación local del 30 de agosto de 2026:
+
+- Sólo la foto de fondo usa una luminosidad reducida al 70%; el scrim, la saturación, el contraste y la constelación conservan sus valores originales.
+- Revisión real en Edge a 390px, 768px y 1440px: el header conserva legibilidad, el título termina su entrada y no aparece overflow horizontal.
+- Consola: sin eventos `warn`, `error` ni excepciones de aplicación; Edge emitió sólo avisos informativos de lazy loading propios del modo headless.
+- Capturas: `.impeccable/review/hero-darker-cdp-390.png`, `hero-darker-cdp-768.png` y `hero-darker-cdp-1440.png`.
+- `npm run typecheck` y `npm run build` pasan; el build mantiene 36 rutas estáticas. `npm run lint` continúa bloqueado por la incompatibilidad documentada entre `typescript-eslint` y TypeScript 7.0.2.
+
 ## Privacidad
 
 No se inició sesión en Dokploy, no se intentó recuperar credenciales y no se registraron en la documentación URLs privadas de paneles, IPs ni identificadores internos. Las capturas locales provienen sólo de páginas públicas sin login.

@@ -255,7 +255,7 @@ summary:focus-visible {
 }
 
 .heroMedia img {
-  filter: saturate(0.78) contrast(1.12);
+  filter: brightness(0.7) saturate(0.78) contrast(1.12);
   object-fit: cover;
   object-position: center 61%;
 }

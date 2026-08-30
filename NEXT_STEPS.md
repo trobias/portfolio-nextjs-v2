@@ -13,7 +13,7 @@
 1. Revalidar todos los enlaces públicos y revisar que ninguna demo haya agregado login.
 2. Reemplazar portadas editoriales por capturas reales sólo cuando exista autorización.
 3. Open Graph y Twitter card creados estáticamente con diseño editorial (`/opengraph-image`, `/twitter-image`).
-4. Ejecutar Lighthouse sobre `https://portfolio-nextjs-v2-ashen.vercel.app` para LCP, CLS, INP, accesibilidad y SEO.
+4. Ejecutar Lighthouse sobre `https://tarnowski-portafolio.vercel.app` para LCP, CLS, INP, accesibilidad y SEO.
 5. Probar teclado, hover real, zoom 200% y `prefers-reduced-motion` en Chrome/Edge y Firefox.
 6. Entregar la URL oficial de Facebook de ZUBU Agency para completar su bloque social sin inventar un perfil.
 7. Decidir si los archivos estáticos legacy de la raíz (`index.html`, `styles.css`) se archivan o eliminan; se conservaron para no borrar trabajo sin aprobación.

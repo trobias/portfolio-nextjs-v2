@@ -29,6 +29,7 @@ La referencia visual es NOTMID sólo por su escala tipográfica, contraste, ritm
 - El portfolio es una aplicación web pública, no una app nativa.
 - El idioma principal es español de Argentina.
 - No existe autenticación, base de datos ni CMS dentro de este repositorio.
+- El alias público de producción es `https://tarnowski-portafolio.vercel.app`; el portfolio legacy permanece separado en `https://antiguoportafoliotarnowski.vercel.app`.
 - `lib/projects.ts` es la fuente de contenido y acceso de cada caso.
 - Los despliegues privados de clientes no forman parte de la superficie pública.
 - La ausencia de evidencia se representa con una portada editorial honesta.

@@ -12,4 +12,4 @@ The current lint gate is blocked because the bundled `typescript-eslint` does no
 
 Commit every verified functional change separately with a Spanish commit message and push it to `main`; this repository has standing user authorization for that workflow.
 
-This is the independent Next.js repository `trobias/portfolio-nextjs-v2`, deployed by the separate Vercel project `portfolio-nextjs-v2` at `portfolio-nextjs-v2-ashen.vercel.app`; never push it to the legacy `trobias/PORTFOLIO` repository.
+This is the independent Next.js repository `trobias/portfolio-nextjs-v2`, deployed by the separate Vercel project `portfolio-nextjs-v2` at `tarnowski-portafolio.vercel.app`; the legacy `trobias/PORTFOLIO` project remains at `antiguoportafoliotarnowski.vercel.app`, and this code must never be pushed there.

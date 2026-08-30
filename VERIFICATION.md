@@ -2,9 +2,9 @@
 
 > Criterios de aceptación: `SPEC.md`. Si un resultado cambia, actualizar también `NEXT_STEPS.md` y la tarea correspondiente.
 
-Fecha de revisión: 28 de agosto de 2026.
+Fecha de revisión: 30 de agosto de 2026.
 
-Producción: `https://portfolio-nextjs-v2-ashen.vercel.app`, proyecto Vercel independiente `portfolio-nextjs-v2`.
+Producción: `https://tarnowski-portafolio.vercel.app`, proyecto Vercel independiente `portfolio-nextjs-v2`.
 
 ## Resultado técnico
 
@@ -27,6 +27,18 @@ Producción: `https://portfolio-nextjs-v2-ashen.vercel.app`, proyecto Vercel ind
 - El deployment final quedó `Ready` después de compilar TypeScript y generar 36 páginas.
 - Portada, `/proyectos`, una ficha individual, `/robots.txt`, `/sitemap.xml` y `/opengraph-image` responden HTTP 200 en producción.
 - La copia independiente no tiene dependencias instaladas localmente; el gate definitivo se ejecutó en el entorno limpio de Vercel mediante `npm install` y `npm run build`.
+
+## Reasignación de dominios
+
+Verificación del 30 de agosto de 2026:
+
+- `tarnowski-portafolio.vercel.app` fue transferido del proyecto legacy `portfolio` al proyecto Next.js `portfolio-nextjs-v2`.
+- El portfolio anterior conserva una URL pública independiente en `antiguoportafoliotarnowski.vercel.app`.
+- El deployment de producción del proyecto Next.js quedó `Ready` y genera 36 rutas estáticas.
+- Portada, `/proyectos`, `/robots.txt` y `/sitemap.xml` responden HTTP 200 en el nuevo alias.
+- La portada publica `og:url` con `https://tarnowski-portafolio.vercel.app`; robots referencia su sitemap y las 29 URLs del sitemap usan ese mismo dominio sin referencias al alias provisional.
+- El alias del portfolio anterior responde HTTP 200 y conserva el título del sitio legacy, confirmando que no fue reemplazado por este código.
+- `npm run typecheck` y `npm run build` pasan localmente. `npm run lint` continúa bloqueado antes de analizar archivos por la incompatibilidad documentada entre `typescript-eslint` y TypeScript 7.0.2.
 
 ## Revisión visual
 
@@ -51,7 +63,7 @@ Se verificó localmente la puerta visual al archivo, las miniaturas compactas, l
 
 Publicación confirmada para el commit `81ff71a`:
 
-- Deployment de producción `Ready` en 23 segundos y asociado a `portfolio-nextjs-v2-ashen.vercel.app`.
+- Ese deployment de producción quedó `Ready` en 23 segundos y estaba asociado al entonces alias provisional `portfolio-nextjs-v2-ashen.vercel.app`.
 - Portada, `/proyectos` y `/proyectos/tienda-mamayucca` responden HTTP 200.
 - Esa publicación fue reemplazada por la iteración de 27 casos y tres categorías documentada debajo.
 

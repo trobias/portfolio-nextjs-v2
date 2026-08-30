@@ -18,7 +18,7 @@ B1 + B2 + B3
 
 ## Fase 1: desbloqueos
 
-1. Dominio y publicación resueltos con el repositorio y proyecto Vercel independientes; conservar el alias documentado hasta aprobar un dominio personalizado.
+1. Dominio y publicación resueltos con el repositorio y proyecto Vercel independientes; conservar `tarnowski-portafolio.vercel.app` como alias público documentado hasta aprobar un dominio personalizado.
 2. Obtener la URL oficial de Facebook de ZUBU Agency; no asociar resultados homónimos.
 
 Checkpoint: `NEXT_STEPS.md` no contiene un bloqueo que ya fue resuelto.

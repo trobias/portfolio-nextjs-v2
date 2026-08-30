@@ -14,7 +14,7 @@ Cada tarea cabe en una sesión enfocada y debe actualizar la documentación rela
 ## Pendiente, bloqueado por decisión o material
 
 - [x] Confirmar dominio de producción y actualizar metadata, sitemap y robots.
-  - Acceptance: las tres superficies usan `portfolio-nextjs-v2-ashen.vercel.app` y el build de Vercel pasa.
+  - Acceptance: las tres superficies usan `tarnowski-portafolio.vercel.app` y el build de Vercel pasa.
   - Verify: `/robots.txt`, `/sitemap.xml`, metadata y rutas principales responden HTTP 200.
   - Files: `app/layout.tsx`, `app/sitemap.ts`, `app/robots.ts`, `VERIFICATION.md`.
 

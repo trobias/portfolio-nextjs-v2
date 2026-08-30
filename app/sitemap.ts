@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 import { projects } from "@/lib/projects";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://portfolio-nextjs-v2-ashen.vercel.app";
+  const baseUrl = "https://tarnowski-portafolio.vercel.app";
   return [
     { url: baseUrl, changeFrequency: "monthly", priority: 1 },
     { url: `${baseUrl}/proyectos`, changeFrequency: "monthly", priority: 0.8 },
